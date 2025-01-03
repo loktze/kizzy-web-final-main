@@ -38,12 +38,12 @@ const FirstTopCard: React.FC<FirstTopCardProps> = ({ className }) => {
           className="absolute bottom-0 left-0 object-cover"
           loading="lazy"
           initial={{ scale: 1 }}
-          animate={{ scale: [1, 0.8, 1] }} // Keyframes for scale down and back
+          animate={{ scale: [1, 0.8, 1] }}
           transition={{
-            duration: 1.2, // Total duration for one cycle
+            duration: 1.2,
             ease: "easeInOut",
-            repeat: Infinity, // Infinite loop
-            repeatDelay: 2, // 5-second delay between repeats
+            repeat: Infinity,
+            repeatDelay: 2,
           }}
         />
         <img

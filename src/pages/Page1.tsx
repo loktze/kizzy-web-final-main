@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Header from "../components/layout/Header";
+import P1Header from "../components/layout/P1Header";
 
 interface Page1Props {
   currentPage: number;
@@ -13,8 +12,7 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
       className="relative h-screen flex bg-cover bg-center"
       style={{ backgroundImage: "url('/images/background.png')" }}
     >
-      <Header currentPage={currentPage} />
-
+      <P1Header />
       {/* <div className="relative w-full">
         <img
           src="/images/hand-mobile.png"
@@ -70,8 +68,8 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
               }}
               className="inline-block text-white font-poppins font-semibold whitespace-nowrap text-[100px] md:text-[300px] leading-[1.2] overflow-visible"
               style={{
-                paddingBottom: "20px", // Ensures space for descenders
-                WebkitTextStroke: "0.2px transparent", // Prevent artifacts
+                paddingBottom: "20px",
+                WebkitTextStroke: "0.2px transparent",
               }}
               aria-hidden="true"
             >
@@ -84,15 +82,11 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
 
       <footer className="absolute bottom-0 w-full bg-transparent">
         <div className="hidden md:flex justify-end p-12">
-          <Link to="/privacy-policy" className="p1footer">
-            Privacy Policy
-          </Link>
+          <p className="p1footer">Privacy Policy</p>
         </div>
         <div className="bg-white flex justify-center md:hidden">
           <div className="flex gap-4 pb-6">
-            <Link to="/privacy-policy" className="p1footer">
-              Privacy Policy
-            </Link>
+            <p className="p1footer">Privacy Policy</p>
             <div>
               <p className="p1footer">Careers</p>
             </div>

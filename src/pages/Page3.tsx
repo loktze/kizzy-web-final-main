@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import Header from "../components/layout/Header";
+import { motion, AnimatePresence } from "framer-motion";
+import Lottie from "lottie-react";
+import wave from "../assets/lotties/wave.json";
+import P3Header from "../components/layout/P3Header";
 
 interface Page3Props {
   currentPage: number;
@@ -12,11 +13,9 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
     console.log("currentPage", currentPage);
   }, [currentPage]);
 
-
   return (
     <div className="relative h-screen bg-[#110c2f] bg-cover bg-center">
-      <Header currentPage={currentPage} />
-
+      <P3Header />
       <motion.div
         initial={{ opacity: 0 }}
         animate={
@@ -25,10 +24,9 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             : {}
         }
         transition={{ duration: 1, delay: 0.5 }}
-        className="flex w-full pt-20 lg:pt-28 h-screen text-center"
+        className="flex w-full pt-20 lg:pt-28 h-full text-center"
       >
-        <div className="relative mt-6 md:mt-2 2xl:mt-2 w-full flex flex-col items-center h-screen">
-          {/* Headline with Decoration */}
+        <div className="relative w-full flex flex-col items-center h-screen">
           <motion.div
             initial={{ opacity: 0, translateY: 50 }}
             animate={
@@ -52,7 +50,6 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             </p>
           </motion.div>
 
-          {/* Subtext */}
           <motion.div
             initial={{ opacity: 0, translateY: 20 }}
             animate={
@@ -61,18 +58,17 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
                 : {}
             }
             transition={{ duration: 1, delay: 0.6, ease: "easeInOut" }}
-            className="mt-4"
+            className="mt-8"
           >
             <p className="subtext text-lightgrey">
-              Social media creators have taken over the world.
+              Social Media Betting is the future of how
               <br className="md:hidden" />
-              Why not bet on them?
+              ot make money online.
               <br />
-              Kizzy is the world’s first social media betting app.
+              What are you waiting for?
             </p>
           </motion.div>
 
-          {/* Download Button */}
           <motion.div
             initial={{ opacity: 0, translateY: 50 }}
             animate={
@@ -80,17 +76,17 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
                 ? { opacity: 1, translateY: 0 }
                 : {}
             }
-            transition={{ duration: 1, delay: 0.9, ease: "easeInOut" }}
-            className="mt-4 md:hidden"
+            transition={{ duration: 1, delay: 0.7, ease: "easeInOut" }}
+            className="mt-8"
           >
-            <div className="inline-flex items-center gap-2 rounded-lg py-3 px-4 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
+            <div className="inline-flex items-center gap-2 rounded-[10px] py-3 px-4 lg:rounded-2xl lg:py-4 lg:px-6 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={2.5}
                 stroke="white"
-                className="w-[17px]"
+                className="w-[17px] lg:[22px]"
               >
                 <path
                   strokeLinecap="round"
@@ -101,55 +97,105 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
               <div className="download">Download Now</div>
             </div>
           </motion.div>
+
+          <AnimatePresence>
+            {(currentPage === 2 || currentPage === 4) && (
+              <motion.div
+                key="phone2-container"
+                className="pt-24 md:pt-28 lg:p-0 xl:p-0 flex justify-center items-center w-full relative"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{
+                  duration: 1,
+                  ease: "easeInOut",
+                  delay: 1,
+                }}
+              >
+                <motion.img
+                  src="/images/phone2.png"
+                  alt="Phone 2"
+                  width={298}
+                  height={190}
+                  className="lg:w-[462px] lg:h-[361px] object-contain z-10"
+                  loading="lazy"
+                />
+                <div className="absolute top-[36%] md:top-[39%] lg:top-[13%] xl:-top[38%] left-1/2 transform -translate-x-1/2">
+                  <Lottie
+                    animationData={wave}
+                    loop={true}
+                    autoplay={true}
+                    aria-label="Wave Animation"
+                    className="w-[360px] lg:w-[540px] mx-auto"
+                  />
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </motion.div>
 
-      <div
-        className={`hidden xl:flex w-full opacity-0 duration-[1000ms] delay-[1500ms] ${currentPage === 2 && "lg:opacity-100"
-          } `}
-      >
-        <div className="absolute left-[14%] top-[28%] xl:left-[14%] xl:top-[17%] 2xl:left-[12%] 2xl:top-[16%]">
-          <img
+      <div className="hidden xl:flex w-full">
+        <motion.div
+          className="absolute left-[10%] top-[17%] 2xl:left-[12%] 2xl:top-[16%]"
+          initial={{ opacity: 0, x: -20 }}
+          animate={
+            currentPage === 2 ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
+          }
+          transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
+        >
+          <motion.img
             src="/images/left-top-image.png"
             alt="Left Top"
-            className="object-contain w-[208px] h-[208px] xl:w-[242px] xl:h-[242px] 2xl:w-[322px] 2xl:h-[322px]"
+            className="object-contain w-[208px] h-[208px] xl:w-[242px] xl:h-[242px] 2xl:w-[282px] 2xl:h-[282px]"
             loading="lazy"
           />
-        </div>
-        <div className="absolute left-[10%] bottom-[28%] xl:left-[10%] xl:bottom-[17%] 2xl:left-[8%] 2xl:bottom-[11%]">
-          <img
+        </motion.div>
+        <motion.div
+          className="absolute left-[6%] bottom-[17%] 2xl:left-[8%] 2xl:bottom-[11%]"
+          initial={{ opacity: 0, x: -20 }}
+          animate={
+            currentPage === 2 ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
+          }
+          transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
+        >
+          <motion.img
             src="/images/left-bot-image.png"
             alt="Left Bottom"
-            className="object-contain w-[208px] h-[208px] xl:w-[242px] xl:h-[242px] 2xl:w-[322px] 2xl:h-[322px]"
+            className="object-contain w-[208px] h-[208px] xl:w-[242px] xl:h-[242px] 2xl:w-[282px] 2xl:h-[282px]"
             loading="lazy"
           />
-        </div>
-        <div className="absolute right-20 top-[38%] xl:right-[6%] xl:top-[34%] 2xl:right-[6%]">
-          <img
+        </motion.div>
+
+        <motion.div
+          className="absolute right-20 top-[38%] xl:right-[6%] xl:top-[34%] 2xl:right-[6%]"
+          initial={{ opacity: 0, x: 20 }}
+          animate={
+            currentPage === 2 ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
+          }
+          transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
+        >
+          <motion.img
             src="/images/right-image.png"
             alt="Right"
-            className="object-contain w-[269px] h-[269px] xl:w-[309px] xl:h-[309px] 2xl:w-[389px] 2xl:h-[389px]"
+            className="object-contain w-[269px] h-[269px] xl:w-[309px] xl:h-[309px] 2xl:w-[339px] 2xl:h-[339px]"
             loading="lazy"
           />
-        </div>
+        </motion.div>
       </div>
 
       <footer className="absolute bottom-0 w-full bg-transparent">
         <div className="flex justify-center md:hidden">
           <div className="flex gap-4 pb-8">
             <p className="p3footer">&copy; Kizzy Labs</p>
-            <Link to="/privacy-policy" className="p3footer">
-              Privacy Policy
-            </Link>
+            <p className="p3footer">Privacy Policy</p>
           </div>
         </div>
         <div className="hidden md:flex justify-center">
-          <div className="font-lexend flex gap-4 pb-8">
+          <div className="font-lexend flex gap-8 pb-8">
             <p className="p3footer">Career</p>
             <p className="p3footer">&copy; Kizzy Labs</p>
-            <Link to="/privacy-policy" className="p3footer">
-              Privacy Policy
-            </Link>
+            <p className="p3footer">Privacy Policy</p>
           </div>
         </div>
       </footer>

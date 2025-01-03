@@ -1,5 +1,5 @@
-import React from 'react';
-import TruncatedText from '../TruncatedText';
+import React from "react";
+import TruncatedText from "../TruncatedText";
 
 interface SecondBottomCardProps {
   className?: string;
@@ -7,9 +7,7 @@ interface SecondBottomCardProps {
 
 const SecondBottomCard: React.FC<SecondBottomCardProps> = ({ className }) => {
   return (
-    <div
-      className="w-[340px] bg-[#fff] rounded-2xl p-4 shadow-lg"
-    >
+    <div className="w-[340px] bg-[#fff] rounded-2xl p-4 shadow-lg">
       <div className="flex justify-between">
         <div className="flex gap-2.5">
           <img
@@ -71,9 +69,12 @@ const SecondBottomCard: React.FC<SecondBottomCardProps> = ({ className }) => {
       </div>
       <div className="flex mt-1">
         <p className="font-lexend text-xs text-black">
-          I am increasingly convinced that<br />
-          @Neuralink<br />
-          should prioritize making an implant that can eliminate back & neck pain.
+          I am increasingly convinced that
+          <br />
+          @Neuralink
+          <br />
+          should prioritize making an implant that can eliminate back & neck
+          pain.
         </p>
       </div>
       <div className="flex pt-2">
@@ -83,7 +84,7 @@ const SecondBottomCard: React.FC<SecondBottomCardProps> = ({ className }) => {
           width={320}
           height={176}
           className="object-contain mx-auto"
-          loading="lazy" // Optional: enables native lazy loading
+          loading="lazy"
         />
       </div>
     </div>

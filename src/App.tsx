@@ -12,12 +12,13 @@ import Page3 from "./pages/Page3";
 import Page4 from "./pages/Page4";
 import Page5 from "./pages/Page5";
 import PortalPhone from "./components/PortalPhone";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
 import useMediaQuery from "./hooks/useMediaQuery";
+// import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [currentPage, setCurrentPage] = useState(0);
+  const isThrottled = useRef(false);
 
   const isLarge = useMediaQuery("(min-width: 1024px)");
   const isMedium = useMediaQuery("(max-width: 1023px)");
@@ -49,30 +50,22 @@ function App() {
   const handleScroll = useCallback(() => {
     if (!containerRef.current) return;
 
-    const scrollPosition = containerRef.current.scrollTop;
-    const pageHeight = containerRef.current.offsetHeight;
+    if (!isThrottled.current) {
+      isThrottled.current = true;
 
-    // Calculate the total height of all pages
-    const totalHeight = pageHeight * pages.length;
+      requestAnimationFrame(() => {
+        const scrollPosition = containerRef.current!.scrollTop;
+        const pageHeight = containerRef.current!.offsetHeight;
 
-    // Clamp the scroll position
-    const clampedScrollPosition = Math.max(
-      0,
-      Math.min(scrollPosition, totalHeight - pageHeight)
-    );
+        const newPage = Math.round(scrollPosition / pageHeight);
+        if (newPage !== currentPage) {
+          setCurrentPage(newPage);
+        }
 
-    // Correct the scroll position if out of bounds
-    if (scrollPosition !== clampedScrollPosition) {
-      containerRef.current.scrollTop = clampedScrollPosition;
-      return;
+        isThrottled.current = false;
+      });
     }
-
-    // Calculate the current page index
-    const newPage = Math.round(clampedScrollPosition / pageHeight);
-    if (newPage !== currentPage) {
-      setCurrentPage(newPage);
-    }
-  }, [currentPage, pages.length]);
+  }, [currentPage]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -87,13 +80,12 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Scrolling Pages */}
         <Route
           path="/"
           element={
             <div
               ref={containerRef}
-              className="h-screen overflow-y-scroll snap-y snap-mandatory"
+              className="h-screen overflow-y-scroll snap-y snap-mandatory scrollbar-hide"
             >
               {pages.map((PageComponent, index) => (
                 <div key={index} className="h-screen snap-start">
@@ -105,9 +97,7 @@ function App() {
             </div>
           }
         />
-
-        {/* Privacy Policy Page */}
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        {/* <Route path="/privacy-policy" element={<PrivacyPolicy />} /> */}
       </Routes>
     </Router>
   );

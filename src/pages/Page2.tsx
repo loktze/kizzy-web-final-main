@@ -4,7 +4,7 @@ import FirstTopCard from "../components/common/FirstTopCard";
 import FirstBottomCard from "../components/common/FirstBottomCard";
 import SecondTopCard from "../components/common/SecondTopCard";
 import SecondBottomCard from "../components/common/SecondBottomCard";
-import Header from "../components/layout/Header";
+import P1Header from "../components/layout/P1Header";
 
 interface Page2Props {
   currentPage: number;
@@ -22,18 +22,17 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
     <div
       className="relative h-screen flex flex-col bg-cover bg-center"
       style={{ backgroundImage: "url('/images/background.png')" }}
-      onTouchStart={(e) => e.stopPropagation()} // Prevent interference with App.tsx
+      onTouchStart={(e) => e.stopPropagation()}
     >
-      <Header currentPage={currentPage} />
+      <P1Header />
 
       <motion.div
         initial={{ opacity: 0 }}
         animate={currentPage === 1 ? { opacity: 1, translateY: 0 } : {}}
         transition={{ duration: 1, delay: 0.5 }}
-        className="flex pt-20 md:pt-16 2xl:pt-28 w-full"
+        className="flex pt-28 lg:pt-28 2xl:pt-28 w-full"
       >
-        <div className="relative mt-6 md:mt-12 2xl:mt-2 w-full flex flex-col items-center h-screen">
-          {/* Headline */}
+        <div className="relative w-full flex flex-col items-center h-screen">
           <motion.p
             initial={{ opacity: 0, translateY: 50 }}
             animate={currentPage === 1 ? { opacity: 1, translateY: 0 } : {}}
@@ -43,7 +42,6 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
             Betting Like Never Before
           </motion.p>
 
-          {/* Subtext */}
           <motion.div
             initial={{ opacity: 0, translateY: 50 }}
             animate={currentPage === 1 ? { opacity: 1, translateY: 0 } : {}}
@@ -59,7 +57,6 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
             </p>
           </motion.div>
 
-          {/* Download Button */}
           <motion.div
             initial={{ opacity: 0, translateY: 50 }}
             animate={currentPage === 1 ? { opacity: 1, translateY: 0 } : {}}

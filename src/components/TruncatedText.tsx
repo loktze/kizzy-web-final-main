@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface TruncatedTextProps {
   text: string;
@@ -6,13 +6,18 @@ interface TruncatedTextProps {
   className?: string;
 }
 
-const TruncatedText: React.FC<TruncatedTextProps> = ({ text, maxLength, className }) => {
-  const truncated = text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
+const TruncatedText: React.FC<TruncatedTextProps> = ({
+  text,
+  maxLength,
+  className,
+}) => {
+  const truncated =
+    text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
 
   return (
     <span
       className={`truncate ${className}`}
-      title={text.length > maxLength ? text : undefined} // Tooltip shows full text on hover if truncated
+      title={text.length > maxLength ? text : undefined}
     >
       {truncated}
     </span>

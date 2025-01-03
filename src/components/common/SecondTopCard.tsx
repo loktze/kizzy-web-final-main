@@ -1,7 +1,7 @@
-import React from 'react';
-import TruncatedText from '../TruncatedText';
+import React from "react";
+import TruncatedText from "../TruncatedText";
 import Lottie from "lottie-react";
-import animation from "../../assets/lotties/animation.json";
+import greenline from "../../assets/lotties/greenline.json";
 
 interface SecondTopCardProps {
   className?: string;
@@ -9,9 +9,7 @@ interface SecondTopCardProps {
 
 const SecondTopCard: React.FC<SecondTopCardProps> = ({ className }) => {
   return (
-    <div
-      className="w-[340px] bg-[#F5F5F5] rounded-tl-2xl rounded-b-2xl shadow-lg"
-    >
+    <div className="w-[340px] bg-[#F5F5F5] rounded-tl-2xl rounded-b-2xl shadow-lg">
       <div className="relative w-full inline-block">
         <div className="absolute -top-5 right-0 bg-black font-lexend text-white text-[8px] px-3 py-1 rounded-t-xl">
           PVP Pool
@@ -58,8 +56,10 @@ const SecondTopCard: React.FC<SecondTopCardProps> = ({ className }) => {
           </div>
           <div className="relative bg-[#EFEFEF] py-3 px-5 rounded-b-2xl">
             <div>
-              <p className="font-lexend text-xs text-[#07010D] font-semibold">7 Days Stranded On An Island</p>
-              <div className='flex justify-between items-center mt-2'>
+              <p className="font-lexend text-xs text-[#07010D] font-semibold">
+                7 Days Stranded On An Island
+              </p>
+              <div className="flex justify-between items-center mt-2">
                 <div className="flex gap-9">
                   <div className="flex items-center gap-1">
                     <img
@@ -70,21 +70,30 @@ const SecondTopCard: React.FC<SecondTopCardProps> = ({ className }) => {
                       className="object-contain"
                       loading="lazy"
                     />
-                    <p className="font-lexend text-sm text-yellow font-semibold">15,153</p>
+                    <p className="font-lexend text-sm text-yellow font-semibold">
+                      15,153
+                    </p>
                   </div>
                   <div className="flex items-center">
                     <p className="text-purple font-semibold text-sm">
-                      123k <span className="font-lexend text-sm font-normal"> Views </span>
-                      <span className="font-lexend text-lightpurple text-xs font-normal"> in 12 hr</span>
+                      123k{" "}
+                      <span className="font-lexend text-sm font-normal">
+                        {" "}
+                        Views{" "}
+                      </span>
+                      <span className="font-lexend text-lightpurple text-xs font-normal">
+                        {" "}
+                        in 12 hr
+                      </span>
                     </p>
                   </div>
                 </div>
-                <div className='absolute -bottom-3 -right-10'>
+                <div className="absolute -bottom-3 -right-10">
                   <Lottie
-                    animationData={animation}
+                    animationData={greenline}
                     loop={true}
                     autoplay={true}
-                    className='w-[180px]'
+                    className="w-[180px]"
                     aria-label="Green line"
                   />
                 </div>
