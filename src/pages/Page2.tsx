@@ -30,7 +30,7 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
         initial={{ opacity: 0 }}
         animate={currentPage === 1 ? { opacity: 1, translateY: 0 } : {}}
         transition={{ duration: 1, delay: 0.5 }}
-        className="flex pt-28 lg:pt-28 2xl:pt-28 w-full"
+        className="flex pt-20 lg:pt-28 2xl:pt-28 w-full"
       >
         <div className="relative w-full flex flex-col items-center h-screen">
           <motion.p

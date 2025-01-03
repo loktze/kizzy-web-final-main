@@ -76,8 +76,8 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
                 ? { opacity: 1, translateY: 0 }
                 : {}
             }
-            transition={{ duration: 1, delay: 0.7, ease: "easeInOut" }}
-            className="mt-8"
+            transition={{ duration: 1, delay: 0.6, ease: "easeInOut" }}
+            className="mt-4"
           >
             <div className="inline-flex items-center gap-2 rounded-[10px] py-3 px-4 lg:rounded-2xl lg:py-4 lg:px-6 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
               <svg
@@ -109,7 +109,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
                 transition={{
                   duration: 1,
                   ease: "easeInOut",
-                  delay: 1,
+                  delay: 0.8,
                 }}
               >
                 <motion.img

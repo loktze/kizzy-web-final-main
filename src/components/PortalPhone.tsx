@@ -26,9 +26,9 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({ currentPage }) => {
   const animationValues =
     currentPage === 1
       ? {
-          y: isLarge ? 260 : isMedium ? 280 : 230,
-          scale: isLarge ? 1.3 : isMedium ? 1.55 : 1.6,
-        }
+        y: isLarge ? 260 : isMedium ? 280 : 230,
+        scale: isLarge ? 1.3 : isMedium ? 1.55 : 1.6,
+      }
       : { y: 0, scale: 1 };
 
   const videoId = "1033441094";
@@ -37,7 +37,7 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({ currentPage }) => {
     <div className="fixed inset-0 flex items-center justify-center pointer-events-none">
       <AnimatePresence mode="wait">
         <motion.div
-          className="relative pointer-events-auto"
+          className="relative pointer-events-none"
           animate={{
             y: animationValues.y,
             scale: animationValues.scale,

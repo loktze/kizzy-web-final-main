@@ -13,7 +13,19 @@ import Page4 from "./pages/Page4";
 import Page5 from "./pages/Page5";
 import PortalPhone from "./components/PortalPhone";
 import useMediaQuery from "./hooks/useMediaQuery";
+import { motion, AnimatePresence } from "framer-motion";
 // import PrivacyPolicy from "./pages/PrivacyPolicy";
+
+const pageVariants = {
+  initial: { opacity: 0, x: 100 },
+  animate: { opacity: 1, x: 0 },
+  exit: { opacity: 0, x: -100 },
+};
+
+const transitionConfig = {
+  duration: 1.5, // Increase duration for slower transition
+  ease: "easeInOut", // Use an easing function for smooth motion
+};
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -85,13 +97,23 @@ function App() {
           element={
             <div
               ref={containerRef}
-              className="h-screen overflow-y-scroll snap-y snap-mandatory scrollbar-hide"
+              className="h-screen overflow-y-scroll snap-y snap-mandatory scrollbar-hide scroll-container"
             >
-              {pages.map((PageComponent, index) => (
-                <div key={index} className="h-screen snap-start">
-                  {PageComponent}
-                </div>
-              ))}
+              <AnimatePresence mode="wait">
+                {pages.map((PageComponent, index) => (
+                  <motion.div
+                    key={index}
+                    className="h-screen snap-start"
+                    variants={pageVariants}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                    transition={transitionConfig}
+                  >
+                    {PageComponent}
+                  </motion.div>
+                ))}
+              </AnimatePresence>
 
               <PortalPhone currentPage={currentPage} />
             </div>
