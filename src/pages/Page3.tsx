@@ -40,7 +40,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             <img
               src="/images/text-decoration.png"
               alt="Text Decoration"
-              className="absolute z-0 left-0 w-[142px] -top-7 md:w-[256px] md:-top-12 2xl:w-[333px] 2xl:-top-16"
+              className="absolute z-0 left-0 w-[142px] -top-7 md:w-[216px] md:-top-12 lg:w-[256px] lg:-top-12 2xl:w-[333px] 2xl:-top-16"
               loading="lazy"
             />
             <p className="relative headline z-10 text-white text-3xl">

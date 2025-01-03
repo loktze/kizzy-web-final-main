@@ -38,13 +38,19 @@ html {
 .headline {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    line-height: 27px;
+    line-height: 34px;
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .headline {
+        font-size: 38px;
+    }
 }
 
 @media (min-width: 1025px) and (max-width: 1536px) {
     .headline {
-        font-size: 40px;
-        line-height: 47px;
+        font-size: 58px;
+        line-height: 56px;
     }
 }
 
@@ -63,7 +69,7 @@ html {
     letter-spacing: -0.176px;
 }
 
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 601px) {
     .subtext {
         font-size: 14px;
     }
