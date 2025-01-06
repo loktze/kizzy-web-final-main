@@ -54,8 +54,8 @@ html {
 
 @media (min-width: 1025px) and (max-width: 1536px) {
     .headline {
-        font-size: 58px;
-        line-height: 56px;
+        font-size: 45px;
+        line-height: 46px;
     }
 }
 
@@ -82,7 +82,7 @@ html {
 
 @media (min-width: 1025px) and (max-width: 1536px) {
     .subtext {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 24px;
         letter-spacing: -0.176px;
     }
@@ -99,25 +99,36 @@ html {
 .download {
     font-family: "Lexend", sans-serif;
     color: white;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
     line-height: 18px;
     letter-spacing: -0.132px;
 }
 
-@media (min-width: 1025px) {
+@media (max-width: 1024px) {
+    .download {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1280px) {
     .download {
         font-size: 16px;
-        font-weight: 500;
     }
 }
 
 .careers {
     font-family: "Lexend", sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     line-height: 21px;
     letter-spacing: -0.154px;
+}
+
+@media (min-width: 1280px) {
+    .download {
+        font-size: 14px;
+    }
 }
 
 .p1footer {
@@ -141,6 +152,7 @@ html {
     0% {
         transform: translateX(0%);
     }
+
     100% {
         transform: translateX(-100%);
     }

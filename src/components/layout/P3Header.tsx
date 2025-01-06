@@ -2,7 +2,7 @@ import React from "react";
 
 const P3Header: React.FC = () => {
   return (
-    <div className="absolute top-0 w-full bg-transparent p-3.5 md:p-8">
+    <div className="absolute top-0 w-full bg-transparent p-3.5 md:p-5">
       <div className="flex justify-between items-center">
         <div>
           <button>
@@ -34,14 +34,14 @@ const P3Header: React.FC = () => {
               </button>
 
             </div>
-            <div className="inline-flex items-center gap-2 rounded-2xl py-4 px-6 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
+            <div className="inline-flex items-center gap-2 rounded-[10px] py-3 px-2.5 lg:px-4 lg:py-3 xl:rounded-2xl xl:py-[15px] shadow-xl:px-5 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={2.5}
                 stroke="white"
-                className="w-[22px]"
+                className="w-[17px] md:w-[22px]"
               >
                 <path
                   strokeLinecap="round"

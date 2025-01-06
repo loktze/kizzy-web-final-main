@@ -27,7 +27,7 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
         initial={{ opacity: 0 }}
         animate={currentPage === 1 ? { opacity: 1, translateY: 0 } : {}}
         transition={{ duration: 1, delay: 0.5 }}
-        className="flex pt-24 lg:pt-28 2xl:pt-28 w-full pointer-events-none"
+        className="flex pt-24 lg:pt-24 2xl:pt-28 w-full pointer-events-none"
       >
         <div className="relative w-full flex flex-col items-center h-screen">
           <motion.p
@@ -43,7 +43,7 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
             initial={{ opacity: 0, translateY: 30 }}
             animate={currentPage === 1 ? { opacity: 1, translateY: 0 } : {}}
             transition={{ duration: 1, delay: 0.6, ease: "easeInOut" }}
-            className="mt-2 md:mt-4 2xl:mt-8"
+            className="mt-2 md:mt-2 xl:mt-2 2xl:mt-8"
           >
             <p className="subtext text-grey text-center">
               Social media creators have taken over the world.
@@ -60,7 +60,7 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
             transition={{ duration: 0.8, delay: 0.9, ease: "easeInOut" }}
             className="mt-4 md:mt-6 md:hidden"
           >
-            <div className="inline-flex items-center gap-2 rounded-lg py-3 px-3 2xl:py-4 2xl:px-4 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
+            <div className="inline-flex items-center gap-2 rounded-[10px] py-3 px-4 lg:rounded-2xl lg:py-3 lg:px-4 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
