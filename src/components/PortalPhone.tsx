@@ -42,7 +42,6 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({ currentPage }) => {
             y: animationValues.y,
             scale: animationValues.scale,
           }}
-          exit={{ opacity: 0 }}
           transition={{
             duration: 1,
             ease: "easeInOut",

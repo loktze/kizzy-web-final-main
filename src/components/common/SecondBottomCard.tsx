@@ -7,7 +7,7 @@ interface SecondBottomCardProps {
 
 const SecondBottomCard: React.FC<SecondBottomCardProps> = ({ className }) => {
   return (
-    <div className="w-[340px] bg-[#fff] rounded-2xl p-4 shadow-lg">
+    <div className="w-[340px] bg-[#fff] rounded-2xl p-4 shadow-2xl pointer-events-none">
       <div className="flex justify-between">
         <div className="flex gap-2.5">
           <img

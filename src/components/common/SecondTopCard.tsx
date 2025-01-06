@@ -9,7 +9,7 @@ interface SecondTopCardProps {
 
 const SecondTopCard: React.FC<SecondTopCardProps> = ({ className }) => {
   return (
-    <div className="w-[340px] bg-[#F5F5F5] rounded-tl-2xl rounded-b-2xl shadow-lg">
+    <div className="w-[340px] bg-[#F5F5F5] rounded-tl-2xl rounded-b-2xl shadow-2xl pointer-events-none">
       <div className="relative w-full inline-block">
         <div className="absolute -top-5 right-0 bg-black font-lexend text-white text-[8px] px-3 py-1 rounded-t-xl">
           PVP Pool

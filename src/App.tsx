@@ -16,15 +16,9 @@ import useMediaQuery from "./hooks/useMediaQuery";
 import { motion, AnimatePresence } from "framer-motion";
 // import PrivacyPolicy from "./pages/PrivacyPolicy";
 
-const pageVariants = {
-  initial: { opacity: 0, x: 100 },
-  animate: { opacity: 1, x: 0 },
-  exit: { opacity: 0, x: -100 },
-};
-
 const transitionConfig = {
-  duration: 1.5, // Increase duration for slower transition
-  ease: "easeInOut", // Use an easing function for smooth motion
+  duration: 5,
+  ease: "easeInOut",
 };
 
 function App() {
@@ -104,7 +98,6 @@ function App() {
                   <motion.div
                     key={index}
                     className="h-screen snap-start"
-                    variants={pageVariants}
                     initial="initial"
                     animate="animate"
                     exit="exit"

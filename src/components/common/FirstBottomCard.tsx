@@ -9,7 +9,7 @@ const FirstBottomCard: React.FC<FirstBottomCardProps> = ({ className }) => {
   return (
     <div
 
-      className="w-[340px] bg-[#fff] rounded-2xl p-4 shadow-lg"
+      className="w-[340px] bg-[#fff] rounded-2xl p-4 shadow-2xl pointer-events-none"
     >
       <div className="flex justify-between items-center">
         <img

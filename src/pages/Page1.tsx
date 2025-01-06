@@ -57,7 +57,7 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
               "radial-gradient(circle, rgba(204, 196, 245, 0.7) 0%, rgba(204, 196, 245, 0.35) 60%, rgba(204, 196, 245, 0) 100%)", // Darker purple
           }}
         />
-        <div className="absolute w-full flex justify-center z-0 pt-[500px] md:pt-0">
+        <div className="absolute w-full flex justify-center z-0 pt-[500px] md:pt-0 pointer-events-none">
           <div className="w-full whitespace-nowrap overflow-hidden">
             <motion.div
               animate={{ x: ["0%", "-100%"] }}
@@ -86,10 +86,12 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
         </div>
         <div className="bg-white flex justify-center md:hidden">
           <div className="flex gap-4 pb-6">
-            <p className="p1footer">Privacy Policy</p>
-            <div>
+            <button>
+              <p className="p1footer">Privacy Policy</p>
+            </button>
+            <button>
               <p className="p1footer">Careers</p>
-            </div>
+            </button>
           </div>
         </div>
       </footer>

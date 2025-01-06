@@ -30,7 +30,7 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
         initial={{ opacity: 0 }}
         animate={currentPage === 1 ? { opacity: 1, translateY: 0 } : {}}
         transition={{ duration: 1, delay: 0.5 }}
-        className="flex pt-20 lg:pt-28 2xl:pt-28 w-full"
+        className="flex pt-20 lg:pt-28 2xl:pt-28 w-full pointer-events-none"
       >
         <div className="relative w-full flex flex-col items-center h-screen">
           <motion.p
@@ -43,7 +43,7 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, translateY: 50 }}
+            initial={{ opacity: 0, translateY: 30 }}
             animate={currentPage === 1 ? { opacity: 1, translateY: 0 } : {}}
             transition={{ duration: 1, delay: 0.6, ease: "easeInOut" }}
             className="mt-4 md:mt-8 2xl:mt-8"
@@ -58,7 +58,7 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, translateY: 50 }}
+            initial={{ opacity: 0, translateY: 20 }}
             animate={currentPage === 1 ? { opacity: 1, translateY: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.9, ease: "easeInOut" }}
             className="mt-4 md:mt-6 md:hidden"
@@ -78,7 +78,9 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
                   d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
                 />
               </svg>
-              <div className="download 2xl:text-base">Download Now</div>
+              <button>
+                <div className="download 2xl:text-base">Download Now</div>
+              </button>
             </div>
           </motion.div>
         </div>

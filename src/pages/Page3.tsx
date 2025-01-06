@@ -35,7 +35,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
                 : {}
             }
             transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
-            className="relative inline-block"
+            className="relative inline-block pointer-events-none"
           >
             <img
               src="/images/text-decoration.png"
@@ -51,14 +51,14 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, translateY: 20 }}
+            initial={{ opacity: 0, translateY: 30 }}
             animate={
               currentPage === 2 || currentPage === 4
                 ? { opacity: 1, translateY: 0 }
                 : {}
             }
             transition={{ duration: 1, delay: 0.6, ease: "easeInOut" }}
-            className="mt-8"
+            className="mt-6 pointer-events-none"
           >
             <p className="subtext text-lightgrey">
               Social Media Betting is the future of how
@@ -70,7 +70,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, translateY: 50 }}
+            initial={{ opacity: 0, translateY: 20 }}
             animate={
               currentPage === 2 || currentPage === 4
                 ? { opacity: 1, translateY: 0 }
@@ -79,7 +79,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             transition={{ duration: 1, delay: 0.6, ease: "easeInOut" }}
             className="mt-4"
           >
-            <div className="inline-flex items-center gap-2 rounded-[10px] py-3 px-4 lg:rounded-2xl lg:py-4 lg:px-6 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
+            <div className="inline-flex items-center gap-2 rounded-[10px] py-3 px-4 lg:rounded-2xl lg:py-4 lg:px-5 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -94,7 +94,9 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
                   d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
                 />
               </svg>
-              <div className="download">Download Now</div>
+              <button>
+                <div className="download">Download Now</div>
+              </button>
             </div>
           </motion.div>
 
@@ -193,9 +195,15 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
         </div>
         <div className="hidden md:flex justify-center">
           <div className="font-lexend flex gap-8 pb-8">
-            <p className="p3footer">Career</p>
-            <p className="p3footer">&copy; Kizzy Labs</p>
-            <p className="p3footer">Privacy Policy</p>
+            <button>
+              <p className="p3footer">Career</p>
+            </button>
+            <button>
+              <p className="p3footer">&copy; Kizzy Labs</p>
+            </button>
+            <button>
+              <p className="p3footer">Privacy Policy</p>
+            </button>
           </div>
         </div>
       </footer>

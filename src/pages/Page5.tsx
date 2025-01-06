@@ -25,7 +25,7 @@ const Page5: React.FC<Page5Props> = ({ currentPage }) => {
             type: "spring",
             stiffness: 120,
             damping: 12,
-            delay: 1.5,
+            delay: 1.3,
           }}
           className="mb-6"
         >
@@ -41,7 +41,7 @@ const Page5: React.FC<Page5Props> = ({ currentPage }) => {
             type: "spring",
             stiffness: 120,
             damping: 12,
-            delay: 1.0,
+            delay: 0.8,
           }}
         >
           <SecondBottomCard />
@@ -50,10 +50,12 @@ const Page5: React.FC<Page5Props> = ({ currentPage }) => {
       <footer className="absolute bottom-0 w-full bg-transparent">
         <div className="bg-white flex justify-center md:hidden">
           <div className="flex gap-4 pb-6">
-            <p className="p1footer">Privacy Policy</p>
-            <div>
+            <button>
+              <p className="p1footer">Privacy Policy</p>
+            </button>
+            <button>
               <p className="p1footer">Careers</p>
-            </div>
+            </button>
           </div>
         </div>
       </footer>

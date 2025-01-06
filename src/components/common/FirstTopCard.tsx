@@ -8,7 +8,7 @@ interface FirstTopCardProps {
 
 const FirstTopCard: React.FC<FirstTopCardProps> = ({ className }) => {
   return (
-    <div className="w-[340px] bg-[#F5F5F5] rounded-2xl p-4 shadow-lg">
+    <div className="w-[340px] bg-[#F5F5F5] rounded-2xl p-4 shadow-2xl pointer-events-none">
       <div className="flex justify-between items-center gap-2">
         <img
           src="/images/youtube_picture.png"
