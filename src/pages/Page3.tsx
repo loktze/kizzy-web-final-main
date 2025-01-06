@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Lottie from "lottie-react";
 import wave from "../assets/lotties/wave.json";
+import line from "../assets/lotties/line.json";
 import P3Header from "../components/layout/P3Header";
 
 interface Page3Props {
@@ -126,6 +127,15 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
                     aria-label="Wave Animation"
                     className="w-[360px] lg:w-[540px] mx-auto"
                   />
+                  <div className="absolute bottom-14 md:bottom-14 lg:bottom-20 left-1/2 transform -translate-x-1/2 z-10">
+                    <Lottie
+                      animationData={line}
+                      loop={true}
+                      autoplay={true}
+                      aria-label="line Animation"
+                      className="w-[159px] lg:w-[259px] mx-auto"
+                    />
+                  </div>
                 </div>
               </motion.div>
             )}
