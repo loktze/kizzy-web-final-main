@@ -99,16 +99,10 @@ html {
 .download {
     font-family: "Lexend", sans-serif;
     color: white;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 18px;
     letter-spacing: -0.132px;
-}
-
-@media (max-width: 1024px) {
-    .download {
-        font-size: 14px;
-    }
 }
 
 @media (min-width: 1280px) {
@@ -123,12 +117,6 @@ html {
     font-weight: 600;
     line-height: 21px;
     letter-spacing: -0.154px;
-}
-
-@media (min-width: 1280px) {
-    .download {
-        font-size: 14px;
-    }
 }
 
 .p1footer {

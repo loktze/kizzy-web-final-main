@@ -21,7 +21,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             : {}
         }
         transition={{ duration: 1, delay: 0.5 }}
-        className="flex w-full pt-20 lg:pt-24 2xl:pt-40 h-full text-center"
+        className="flex w-full pt-20 lg:pt-24 2xl:pt-28 h-full text-center"
       >
         <div className="relative w-full flex flex-col items-center h-screen">
           <motion.div
@@ -74,9 +74,9 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
                 : {}
             }
             transition={{ duration: 1, delay: 0.6, ease: "easeInOut" }}
-            className="mt-2 lg:mt-4 2xl:mt-4"
+            className="mt-2 lg:mt-4 2xl:mt-6"
           >
-            <div className="inline-flex items-center gap-2 rounded-[10px] py-3 px-4 lg:rounded-2xl lg:py-3 lg:px-4 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
+            <div className="inline-flex items-center gap-2 rounded-[10px] py-3 px-4 lg:py-3.5 lg:px-4 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -101,7 +101,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             {(currentPage === 2 || currentPage === 4) && (
               <motion.div
                 key="phone2-container"
-                className="pt-24 md:pt-28 lg:pt-4 xl:p-4 2xl:pt-24 flex justify-center items-center w-full relative"
+                className="pt-24 md:pt-28 lg:pt-4 xl:p-4 2xl:pt-10 flex justify-center items-center w-full relative"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
@@ -116,10 +116,10 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
                   alt="Phone 2"
                   width={298}
                   height={190}
-                  className="lg:w-[348px] lg:h-[240px] xl:w-[368px] xl:h-[260px] 2xl:w-[432px] 2xl:h-[331px] object-contain z-10"
+                  className="lg:w-[348px] lg:h-[240px] xl:w-[368px] xl:h-[260px] 2xl:w-[551px] 2xl:h-[341px] object-contain z-10"
                   loading="lazy"
                 />
-                <div className="absolute top-[36%] md:top-[39%] lg:-top-[10%] xl:-top[38%] 2xl:top-[32%] left-1/2 transform -translate-x-1/2">
+                <div className="absolute top-[36%] md:top-[39%] lg:-top-[10%] xl:-top[38%] 2xl:top-[26%] left-1/2 transform -translate-x-1/2">
                   <Lottie
                     animationData={wave}
                     loop={true}
@@ -145,7 +145,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
 
       <div className="hidden xl:flex w-full">
         <motion.div
-          className="absolute left-[10%] top-[17%] 2xl:left-[12%] 2xl:top-[16%]"
+          className="absolute left-[10%] top-[17%] 2xl:left-[12%] 2xl:top-[15%]"
           initial={{ opacity: 0, x: -20 }}
           animate={
             currentPage === 2 ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
@@ -155,12 +155,12 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
           <motion.img
             src="/images/left-top-image.png"
             alt="Left Top"
-            className="object-contain w-[208px] h-[208px] xl:w-[232px] xl:h-[232px] 2xl:w-[282px] 2xl:h-[282px]"
+            className="object-contain w-[208px] h-[208px] xl:w-[232px] xl:h-[232px] 2xl:w-[340px] 2xl:h-[340px]"
             loading="lazy"
           />
         </motion.div>
         <motion.div
-          className="absolute left-[6%] bottom-[17%] 2xl:left-[8%] 2xl:bottom-[11%]"
+          className="absolute left-[6%] bottom-[17%] 2xl:left-[8%] 2xl:bottom-[6%]"
           initial={{ opacity: 0, x: -20 }}
           animate={
             currentPage === 2 ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
@@ -170,7 +170,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
           <motion.img
             src="/images/left-bot-image.png"
             alt="Left Bottom"
-            className="object-contain w-[208px] h-[208px] xl:w-[232px] xl:h-[232px] 2xl:w-[282px] 2xl:h-[282px]"
+            className="object-contain w-[208px] h-[208px] xl:w-[232px] xl:h-[232px] 2xl:w-[340px] 2xl:h-[340px]"
             loading="lazy"
           />
         </motion.div>
@@ -186,7 +186,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
           <motion.img
             src="/images/right-image.png"
             alt="Right"
-            className="object-contain w-[269px] h-[269px] xl:w-[279px] xl:h-[279px] 2xl:w-[339px] 2xl:h-[339px]"
+            className="object-contain w-[269px] h-[269px] xl:w-[279px] xl:h-[279px] 2xl:w-[389px] 2xl:h-[389px]"
             loading="lazy"
           />
         </motion.div>
@@ -194,13 +194,13 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
 
       <footer className="absolute bottom-0 w-full bg-transparent">
         <div className="flex justify-center md:hidden">
-          <div className="flex gap-4 pb-8">
+          <div className="flex gap-4 pb-8 2xl:gap-6">
             <p className="p3footer">&copy; Kizzy Labs</p>
             <p className="p3footer">Privacy Policy</p>
           </div>
         </div>
         <div className="hidden md:flex justify-center">
-          <div className="font-lexend flex gap-8 pb-8">
+          <div className="font-lexend flex gap-4 pb-8 2xl:pb-6">
             <button>
               <p className="p3footer">Career</p>
             </button>
