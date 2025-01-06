@@ -58,14 +58,15 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
         <div className="absolute w-full flex justify-center z-0 pt-[500px] md:pt-0 pointer-events-none">
           <div className="w-full whitespace-nowrap overflow-hidden">
             <div
-              className="inline-block text-white font-poppins font-semibold marquee text-[50px] md:text-[150px] leading-[1.2] overflow-visible"
+              className="inline-block text-white font-poppins font-semibold marquee leading-[1.2] overflow-visible"
               style={{
                 paddingBottom: "20px",
                 WebkitTextStroke: "0.2px transparent",
               }}
               aria-hidden="true"
             >
-              Social Media Betting Social Media Betting Social Media Betting ...
+              Social Media Betting Social Media Betting Social Media Betting
+              Social Media Betting Social Media Betting Social Media Betting
             </div>
           </div>
         </div>

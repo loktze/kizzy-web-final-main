@@ -96,7 +96,7 @@ function App() {
               )}
               <div
                 ref={containerRef}
-                className={`h-screen overflow-y-scroll snap-y snap-mandatory scrollbar-hide ${
+                className={`h-screen overflow-x-hidden overflow-y-scroll snap-y snap-mandatory scrollbar-hide ${
                   showHeader ? "pt-16" : ""
                 }`}
               >

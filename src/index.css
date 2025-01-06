@@ -150,4 +150,11 @@ html {
     display: inline-block;
     white-space: nowrap;
     animation: marquee 120s linear infinite;
+    font-size: 100px;
+}
+
+@media (min-width: 1025px) {
+    .marquee {
+        font-size: 300px;
+    }
 }
