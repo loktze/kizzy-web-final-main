@@ -145,7 +145,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
 
       <div className="hidden xl:flex w-full">
         <motion.div
-          className="absolute left-[10%] top-[17%] 2xl:left-[12%] 2xl:top-[15%]"
+          className="absolute left-[10%] top-[17%] 2xl:left-[12%] 2xl:top-[13%]"
           initial={{ opacity: 0, x: -20 }}
           animate={
             currentPage === 2 ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
@@ -160,7 +160,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
           />
         </motion.div>
         <motion.div
-          className="absolute left-[6%] bottom-[17%] 2xl:left-[8%] 2xl:bottom-[6%]"
+          className="absolute left-[6%] bottom-[17%] 2xl:left-[8%] 2xl:bottom-[10%]"
           initial={{ opacity: 0, x: -20 }}
           animate={
             currentPage === 2 ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
