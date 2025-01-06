@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import P1Header from "../components/layout/P1Header";
 
 interface Page1Props {
   currentPage: number;
@@ -12,7 +11,6 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
       className="relative h-screen flex bg-cover bg-center"
       style={{ backgroundImage: "url('/images/background.png')" }}
     >
-      <P1Header />
       {/* <div className="relative w-full">
         <img
           src="/images/hand-mobile.png"

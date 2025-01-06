@@ -13,13 +13,8 @@ import Page4 from "./pages/Page4";
 import Page5 from "./pages/Page5";
 import PortalPhone from "./components/PortalPhone";
 import useMediaQuery from "./hooks/useMediaQuery";
-import { motion, AnimatePresence } from "framer-motion";
+import P1Header from "./components/layout/P1Header";
 // import PrivacyPolicy from "./pages/PrivacyPolicy";
-
-const transitionConfig = {
-  duration: 5,
-  ease: "easeInOut",
-};
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -83,33 +78,37 @@ function App() {
     }
   }, [handleScroll]);
 
+  const showHeader =
+    (isMedium && [0, 1, 2, 3].includes(currentPage)) ||
+    (isLarge && [0, 1].includes(currentPage));
+
   return (
     <Router>
       <Routes>
         <Route
           path="/"
           element={
-            <div
-              ref={containerRef}
-              className="h-screen overflow-y-scroll snap-y snap-mandatory scrollbar-hide scroll-container"
-            >
-              <AnimatePresence mode="wait">
+            <>
+              {showHeader && (
+                <div className="fixed top-0 left-0 w-full z-10">
+                  <P1Header />
+                </div>
+              )}
+              <div
+                ref={containerRef}
+                className={`h-screen overflow-y-scroll snap-y snap-mandatory scrollbar-hide ${
+                  showHeader ? "pt-16" : ""
+                }`}
+              >
                 {pages.map((PageComponent, index) => (
-                  <motion.div
-                    key={index}
-                    className="h-screen snap-start"
-                    initial="initial"
-                    animate="animate"
-                    exit="exit"
-                    transition={transitionConfig}
-                  >
+                  <div key={index} className="h-screen snap-start">
                     {PageComponent}
-                  </motion.div>
+                  </div>
                 ))}
-              </AnimatePresence>
 
-              <PortalPhone currentPage={currentPage} />
-            </div>
+                <PortalPhone currentPage={currentPage} />
+              </div>
+            </>
           }
         />
         {/* <Route path="/privacy-policy" element={<PrivacyPolicy />} /> */}

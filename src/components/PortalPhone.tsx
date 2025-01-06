@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import VimeoEmbed from "./VimeoEmbed";
+// import VimeoEmbed from "./VimeoEmbed";
 import useMediaQuery from "../hooks/useMediaQuery";
 
 interface PortalPhoneProps {
@@ -9,7 +9,7 @@ interface PortalPhoneProps {
 
 const PortalPhone: React.FC<PortalPhoneProps> = ({ currentPage }) => {
   const phoneRef = useRef<HTMLImageElement>(null);
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  // const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   const isLarge = useMediaQuery("(min-width: 1024px)");
   const isMedium = useMediaQuery("(max-width: 1023px)");
@@ -19,19 +19,19 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({ currentPage }) => {
 
   const phoneClassName = `${shouldShowPhone ? "w-[227px] h-[466px] lg:w-[302px] lg:h-[621px] object-contain" : ""}`;
 
-  const handleImageLoad = () => {
-    setIsImageLoaded(true);
-  };
+  // const handleImageLoad = () => {
+  //   setIsImageLoaded(true);
+  // };
 
   const animationValues =
     currentPage === 1
       ? {
-        y: isLarge ? 260 : isMedium ? 280 : 230,
-        scale: isLarge ? 1.3 : isMedium ? 1.55 : 1.6,
-      }
+          y: isLarge ? 260 : isMedium ? 280 : 230,
+          scale: isLarge ? 1.3 : isMedium ? 1.55 : 1.6,
+        }
       : { y: 0, scale: 1 };
 
-  const videoId = "1033441094";
+  // const videoId = "1033441094";
 
   return (
     <div className="fixed inset-0 flex items-center justify-center pointer-events-none">
@@ -62,11 +62,11 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({ currentPage }) => {
                   ease: "easeInOut",
                 }}
                 loading="lazy"
-                onLoad={handleImageLoad}
+                // onLoad={handleImageLoad}
               />
             )}
 
-            {currentPage === 0 && isImageLoaded && (
+            {/* {currentPage === 0 && isImageLoaded && (
               <VimeoEmbed
                 key={`vimeo-${videoId}`}
                 isVisible={currentPage === 0}
@@ -89,7 +89,7 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({ currentPage }) => {
                 loop={true}
                 muted={true}
               />
-            )}
+            )} */}
           </div>
         </motion.div>
       </AnimatePresence>

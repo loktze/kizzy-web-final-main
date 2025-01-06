@@ -4,7 +4,6 @@ import FirstTopCard from "../components/common/FirstTopCard";
 import FirstBottomCard from "../components/common/FirstBottomCard";
 import SecondTopCard from "../components/common/SecondTopCard";
 import SecondBottomCard from "../components/common/SecondBottomCard";
-import P1Header from "../components/layout/P1Header";
 
 interface Page2Props {
   currentPage: number;
@@ -24,8 +23,6 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
       style={{ backgroundImage: "url('/images/background.png')" }}
       onTouchStart={(e) => e.stopPropagation()}
     >
-      <P1Header />
-
       <motion.div
         initial={{ opacity: 0 }}
         animate={currentPage === 1 ? { opacity: 1, translateY: 0 } : {}}
@@ -46,7 +43,7 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
             initial={{ opacity: 0, translateY: 30 }}
             animate={currentPage === 1 ? { opacity: 1, translateY: 0 } : {}}
             transition={{ duration: 1, delay: 0.6, ease: "easeInOut" }}
-            className="mt-4 md:mt-8 2xl:mt-8"
+            className="mt-4 md:mt-4 2xl:mt-8"
           >
             <p className="subtext text-grey text-center">
               Social media creators have taken over the world.

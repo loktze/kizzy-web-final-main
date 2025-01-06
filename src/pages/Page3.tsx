@@ -9,10 +9,6 @@ interface Page3Props {
 }
 
 const Page3: React.FC<Page3Props> = ({ currentPage }) => {
-  useEffect(() => {
-    console.log("currentPage", currentPage);
-  }, [currentPage]);
-
   return (
     <div className="relative h-screen bg-[#110c2f] bg-cover bg-center">
       <P3Header />

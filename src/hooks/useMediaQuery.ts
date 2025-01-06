@@ -1,5 +1,4 @@
-// src/hooks/useMediaQuery.ts
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 /**
  * Custom hook to determine if a media query matches the current viewport.
@@ -11,7 +10,7 @@ const useMediaQuery = (query: string): boolean => {
   const [matches, setMatches] = useState<boolean>(false);
 
   useEffect(() => {
-    if (typeof window === 'undefined') {
+    if (typeof window === "undefined") {
       // If rendering on the server, default to false
       setMatches(false);
       return;
@@ -25,10 +24,10 @@ const useMediaQuery = (query: string): boolean => {
     const listener = () => setMatches(media.matches);
 
     // Add the event listener
-    media.addEventListener('change', listener);
+    media.addEventListener("change", listener);
 
     // Cleanup the event listener on unmount
-    return () => media.removeEventListener('change', listener);
+    return () => media.removeEventListener("change", listener);
   }, [query]);
 
   return matches;
