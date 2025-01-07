@@ -26,19 +26,8 @@ const VimeoEmbed: React.FC<VimeoEmbedProps> = ({
 }) => {
   const iframeSrc = `https://player.vimeo.com/video/${videoId}?badge=0&autopause=0&player_id=0&app_id=58479&background=1&autoplay=${autoplay ? 1 : 0}&loop=${loop ? 1 : 0}&muted=${muted ? 1 : 0}&quality=1080p&dnt=1`;
 
-  const variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-    exit: { opacity: 0 },
-  };
-
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-      variants={variants}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
+    <div
       className={className}
       style={{
         width,
@@ -78,7 +67,7 @@ const VimeoEmbed: React.FC<VimeoEmbedProps> = ({
           }}
         />
       </div>
-    </motion.div>
+    </div>
   );
 };
 

@@ -1,5 +1,4 @@
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Lottie from "lottie-react";
 import wave from "../assets/lotties/wave.json";
 import line from "../assets/lotties/line.json";
@@ -13,27 +12,9 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
   return (
     <div className="relative h-screen bg-[#110c2f] bg-cover bg-center">
       <P3Header />
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={
-          currentPage === 2 || currentPage === 4
-            ? { opacity: 1, translateY: 0 }
-            : {}
-        }
-        transition={{ duration: 1, delay: 0.5 }}
-        className="flex w-full pt-20 lg:pt-24 2xl:pt-28 h-full text-center"
-      >
+      <div className="flex w-full pt-20 lg:pt-24 2xl:pt-28 h-full text-center">
         <div className="relative w-full flex flex-col items-center h-screen">
-          <motion.div
-            initial={{ opacity: 0, translateY: 50 }}
-            animate={
-              currentPage === 2 || currentPage === 4
-                ? { opacity: 1, translateY: 0 }
-                : {}
-            }
-            transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
-            className="relative inline-block pointer-events-none"
-          >
+          <div className="relative inline-block pointer-events-none">
             <img
               src="/images/text-decoration.png"
               alt="Text Decoration"
@@ -45,18 +26,9 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
               <br />
               Betting Now
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, translateY: 30 }}
-            animate={
-              currentPage === 2 || currentPage === 4
-                ? { opacity: 1, translateY: 0 }
-                : {}
-            }
-            transition={{ duration: 1, delay: 0.6, ease: "easeInOut" }}
-            className="mt-2 md:mt-2 2xl:mt-8 pointer-events-none"
-          >
+          <div className="mt-2 md:mt-2 2xl:mt-8 pointer-events-none">
             <p className="subtext text-lightgrey">
               Social Media Betting is the future of how
               <br className="md:hidden" />
@@ -64,18 +36,9 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
               <br />
               What are you waiting for?
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, translateY: 20 }}
-            animate={
-              currentPage === 2 || currentPage === 4
-                ? { opacity: 1, translateY: 0 }
-                : {}
-            }
-            transition={{ duration: 1, delay: 0.6, ease: "easeInOut" }}
-            className="mt-2 lg:mt-4 2xl:mt-6"
-          >
+          <div className="mt-2 lg:mt-4 2xl:mt-6">
             <div className="inline-flex items-center gap-2 rounded-[10px] py-3 px-4 lg:py-3.5 lg:px-4 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -95,101 +58,67 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
                 <div className="download">Download Now</div>
               </button>
             </div>
-          </motion.div>
+          </div>
 
-          <AnimatePresence>
-            {(currentPage === 2 || currentPage === 4) && (
-              <motion.div
-                key="phone2-container"
-                className="pt-24 md:pt-28 lg:pt-4 xl:p-4 2xl:pt-10 flex justify-center items-center w-full relative"
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{
-                  duration: 1,
-                  ease: "easeInOut",
-                  delay: 0.8,
-                }}
-              >
-                <motion.img
-                  src="/images/phone2.png"
-                  alt="Phone 2"
-                  width={298}
-                  height={190}
-                  className="lg:w-[348px] lg:h-[240px] xl:w-[368px] xl:h-[260px] 2xl:w-[551px] 2xl:h-[341px] object-contain z-10"
-                  loading="lazy"
+          {(currentPage === 2 || currentPage === 4) && (
+            <div>
+              <img
+                src="/images/phone2.png"
+                alt="Phone 2"
+                width={298}
+                height={190}
+                className="lg:w-[348px] lg:h-[240px] xl:w-[368px] xl:h-[260px] 2xl:w-[551px] 2xl:h-[341px] object-contain z-10"
+                loading="lazy"
+              />
+              <div className="absolute top-[36%] md:top-[39%] lg:-top-[10%] xl:-top[38%] 2xl:top-[26%] left-1/2 transform -translate-x-1/2">
+                <Lottie
+                  animationData={wave}
+                  loop={true}
+                  autoplay={true}
+                  aria-label="Wave Animation"
+                  className="w-[360px] lg:w-[540px] mx-auto"
                 />
-                <div className="absolute top-[36%] md:top-[39%] lg:-top-[10%] xl:-top[38%] 2xl:top-[26%] left-1/2 transform -translate-x-1/2">
+                <div className="absolute bottom-14 md:bottom-14 lg:bottom-20 left-1/2 transform -translate-x-1/2 z-10">
                   <Lottie
-                    animationData={wave}
+                    animationData={line}
                     loop={true}
                     autoplay={true}
-                    aria-label="Wave Animation"
-                    className="w-[360px] lg:w-[540px] mx-auto"
+                    aria-label="line Animation"
+                    className="w-[159px] lg:w-[259px] mx-auto"
                   />
-                  <div className="absolute bottom-14 md:bottom-14 lg:bottom-20 left-1/2 transform -translate-x-1/2 z-10">
-                    <Lottie
-                      animationData={line}
-                      loop={true}
-                      autoplay={true}
-                      aria-label="line Animation"
-                      className="w-[159px] lg:w-[259px] mx-auto"
-                    />
-                  </div>
                 </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+              </div>
+            </div>
+          )}
         </div>
-      </motion.div>
+      </div>
 
       <div className="hidden xl:flex w-full">
-        <motion.div
-          className="absolute left-[10%] top-[17%] 2xl:left-[12%] 2xl:top-[13%]"
-          initial={{ opacity: 0, x: -20 }}
-          animate={
-            currentPage === 2 ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
-          }
-          transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
-        >
-          <motion.img
+        <div className="absolute left-[10%] top-[17%] 2xl:left-[12%] 2xl:top-[13%]">
+          <img
             src="/images/left-top-image.png"
             alt="Left Top"
             className="object-contain w-[208px] h-[208px] xl:w-[232px] xl:h-[232px] 2xl:w-[340px] 2xl:h-[340px]"
             loading="lazy"
           />
-        </motion.div>
-        <motion.div
-          className="absolute left-[6%] bottom-[17%] 2xl:left-[8%] 2xl:bottom-[10%]"
-          initial={{ opacity: 0, x: -20 }}
-          animate={
-            currentPage === 2 ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
-          }
-          transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
-        >
-          <motion.img
+        </div>
+        <div className="absolute left-[6%] bottom-[17%] 2xl:left-[8%] 2xl:bottom-[10%]">
+          <img
             src="/images/left-bot-image.png"
             alt="Left Bottom"
             className="object-contain w-[208px] h-[208px] xl:w-[232px] xl:h-[232px] 2xl:w-[340px] 2xl:h-[340px]"
             loading="lazy"
           />
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="absolute right-[10%] top-[38%] xl:right-[6%] xl:top-[34%] 2xl:right-[6%]"
-          initial={{ opacity: 0, x: 20 }}
-          animate={
-            currentPage === 2 ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
-          }
-          transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
-        >
-          <motion.img
+        <div className="absolute right-[10%] top-[38%] xl:right-[6%] xl:top-[34%] 2xl:right-[6%]">
+          <img
             src="/images/right-image.png"
             alt="Right"
             className="object-contain w-[269px] h-[269px] xl:w-[279px] xl:h-[279px] 2xl:w-[389px] 2xl:h-[389px]"
             loading="lazy"
           />
-        </motion.div>
+        </div>
       </div>
 
       <footer className="absolute bottom-0 w-full bg-transparent">

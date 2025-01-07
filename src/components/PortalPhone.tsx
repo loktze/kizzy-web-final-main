@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import VimeoEmbed from "./VimeoEmbed";
 import useMediaQuery from "../hooks/useMediaQuery";
 
@@ -24,78 +23,62 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({ currentPage }) => {
   };
 
   const animationValues =
-    currentPage === 1
-      ? {
-        y: isLarge ? 260 : isMedium ? 280 : 230,
-        scale: isLarge ? 1.3 : isMedium ? 1.55 : 1.6,
-      }
-      : { y: 0, scale: 1 };
+    currentPage === 1 && isLarge
+      ? "scale-[1.3] translate-y-[260px]"
+      : isMedium
+        ? "scale-[1.55] translate-y-[280px]"
+        : "scale-[1] translate-y-[0]";
 
   const videoId = "1033441094";
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center pointer-events-none">
-      <AnimatePresence mode="wait">
-        <motion.div
-          className="relative pointer-events-none"
-          animate={{
-            y: animationValues.y,
-            scale: animationValues.scale,
-          }}
-          transition={{
-            duration: 1,
-            ease: "easeInOut",
-          }}
-        >
-          <div className="relative w-full h-full">
-            {shouldShowPhone && (
-              <motion.img
-                key="phone"
-                ref={phoneRef}
-                src="/images/phone.png"
-                alt="Portal Phone Display"
-                className={phoneClassName}
-                initial={{ opacity: 0, y: -50, scale: 0.8 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{
-                  duration: 1,
-                  ease: "easeInOut",
-                }}
-                loading="lazy"
-                onLoad={handleImageLoad}
-                style={{
-                  willChange: "transform, opacity",
-                }}
-              />
-            )}
+    <div className="fixed inset-0 flex items-center scale-110  justify-center pointer-events-none">
+      <div
+        className={`${animationValues} relative pointer-events-none duration-700 transition-transform ease-in-out`}
+      >
+        <div className="relative w-full h-full">
+          {shouldShowPhone && (
+            <img
+              key="phone"
+              ref={phoneRef}
+              src="/images/phone.png"
+              alt="Portal Phone Display"
+              className={phoneClassName}
+              loading="lazy"
+              onLoad={handleImageLoad}
+              style={{
+                willChange: "transform, opacity",
+              }}
+            />
+          )}
 
-            {currentPage === 0 && isImageLoaded && (
-              <VimeoEmbed
-                key={`vimeo-${videoId}`}
-                isVisible={currentPage === 0}
-                videoId="1033441094"
-                width="94%"
-                height="98%"
-                className={`
-                  absolute
-                  top-1/2
-                  left-1/2
-                  transform
-                  -translate-x-1/2
-                  -translate-y-1/2
-                  rounded-[1rem]
-                  md:rounded-[2rem]
-                  2xl:rounded-[3.5rem]
-                  pointer-events-none
-                `}
-                autoplay={true}
-                loop={true}
-                muted={true}
-              />
-            )}
-          </div>
-        </motion.div>
-      </AnimatePresence>
+          <VimeoEmbed
+            key={`vimeo-${videoId}`}
+            isVisible={currentPage === 0}
+            videoId="1033441094"
+            width="94%"
+            height="98%"
+            className={`
+                absolute
+                top-1/2
+                left-1/2
+                transform
+                -translate-x-1/2
+                -translate-y-1/2
+                rounded-[1rem]
+                md:rounded-[2rem]
+                2xl:rounded-[3.5rem]
+                pointer-events-none
+                transition-opacity
+                ease-in-out
+                ${currentPage === 0 && isImageLoaded ? "opacity-100" : "opacity-0"}
+              `}
+            autoplay={true}
+            loop={true}
+            muted={true}
+          />
+        </div>
+      </div>
     </div>
   );
 };

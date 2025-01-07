@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import FirstTopCard from "../components/common/FirstTopCard";
 import FirstBottomCard from "../components/common/FirstBottomCard";
 import SecondTopCard from "../components/common/SecondTopCard";
@@ -9,13 +8,6 @@ interface Page2Props {
   currentPage: number;
 }
 
-const bounceTransition = {
-  type: "spring",
-  stiffness: 80,
-  damping: 14,
-  duration: 1.5,
-};
-
 const Page2: React.FC<Page2Props> = ({ currentPage }) => {
   return (
     <div
@@ -23,43 +15,28 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
       style={{ backgroundImage: "url('/images/background.png')" }}
       onTouchStart={(e) => e.stopPropagation()}
     >
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={currentPage === 1 ? { opacity: 1, translateY: 0 } : {}}
-        transition={{ duration: 1, delay: 0.5 }}
-        className="flex pt-24 lg:pt-24 2xl:pt-28 w-full pointer-events-none"
-      >
+      <div className="flex pt-24 lg:pt-24 2xl:pt-28 w-full pointer-events-none">
         <div className="relative w-full flex flex-col items-center h-screen">
-          <motion.p
-            initial={{ opacity: 0, translateY: 50 }}
-            animate={currentPage === 1 ? { opacity: 1, translateY: 0 } : {}}
-            transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
-            className="headline text-2xl text-center"
+          <div
+            className={`${currentPage === 1 ? "opacity-100" : "opacity-0"} delay-300 ease-in-out transition-opacity duration-700`}
           >
-            Betting Like Never Before
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, translateY: 30 }}
-            animate={currentPage === 1 ? { opacity: 1, translateY: 0 } : {}}
-            transition={{ duration: 1, delay: 0.6, ease: "easeInOut" }}
-            className="mt-2 md:mt-2 xl:mt-2 2xl:mt-8"
-          >
-            <p className="subtext text-grey text-center">
-              Social media creators have taken over the world.
-              <br className="md:hidden" />
-              Why not bet on them?
-              <br />
-              Kizzy is the world’s first social media betting app.
+            <p
+              className={`${currentPage === 1 ? "translate-y-[0]" : "translate-y-[10px]"} delay-300 ease-in-out transition-transform duration-700 headline text-2xl text-center`}
+            >
+              Betting Like Never Before
             </p>
-          </motion.div>
+            <div className="mt-2 md:mt-2 xl:mt-2 2xl:mt-8">
+              <p className="subtext text-grey text-center">
+                Social media creators have taken over the world.
+                <br className="md:hidden" />
+                Why not bet on them?
+                <br />
+                Kizzy is the world’s first social media betting app.
+              </p>
+            </div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, translateY: 20 }}
-            animate={currentPage === 1 ? { opacity: 1, translateY: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.9, ease: "easeInOut" }}
-            className="mt-4 md:mt-6 md:hidden"
-          >
+          <div className="mt-4 md:mt-6 md:hidden">
             <div className="inline-flex items-center gap-2 rounded-[10px] py-3 px-4 lg:rounded-2xl lg:py-3 lg:px-4 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -79,45 +56,27 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
                 <div className="download 2xl:text-base">Download Now</div>
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
-      </motion.div>
+      </div>
 
       <div className="hidden lg:flex">
-        <div className="absolute bottom-2 left-4 xl:left-20 2xl:left-48">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={currentPage === 1 ? { opacity: 1, y: 0 } : {}}
-            transition={{ ...bounceTransition, delay: 1.4 }}
-            className="mb-2"
-          >
+        <div className="absolute bottom-2 left-4 xl:left-20 2xl:left-48 slide-in-bottom">
+          <div className="mb-2">
             <FirstTopCard />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={currentPage === 1 ? { opacity: 1, y: 0 } : {}}
-            transition={{ ...bounceTransition, delay: 0.5 }}
-          >
+          </div>
+          <div>
             <FirstBottomCard />
-          </motion.div>
+          </div>
         </div>
 
         <div className="absolute bottom-2 right-4 xl:right-20 2xl:right-48">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={currentPage === 1 ? { opacity: 1, y: 0 } : {}}
-            transition={{ ...bounceTransition, delay: 1.5 }}
-            className="mb-2"
-          >
+          <div className="mb-2">
             <SecondTopCard />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={currentPage === 1 ? { opacity: 1, y: 0 } : {}}
-            transition={{ ...bounceTransition, delay: 0.6 }}
-          >
+          </div>
+          <div>
             <SecondBottomCard />
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>
