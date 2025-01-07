@@ -25,16 +25,16 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({ currentPage }) => {
   const animationValues =
     currentPage === 1 && isLarge
       ? "scale-[1.3] translate-y-[260px]"
-      : isMedium
+      : currentPage === 1 && isMedium
         ? "scale-[1.55] translate-y-[280px]"
-        : "scale-[1] translate-y-[0]";
+        : "scale-100 translate-y-0";
 
   const videoId = "1033441094";
 
   return (
     <div className="fixed inset-0 flex items-center scale-110  justify-center pointer-events-none">
       <div
-        className={`${animationValues} relative pointer-events-none duration-700 transition-transform ease-in-out`}
+        className={`${animationValues} relative pointer-events-none duration-500 transition-transform ease-in-out`}
       >
         <div className="relative w-full h-full">
           {shouldShowPhone && (

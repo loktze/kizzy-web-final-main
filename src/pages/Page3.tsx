@@ -12,13 +12,15 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
   return (
     <div className="relative h-screen bg-[#110c2f] bg-cover bg-center">
       <P3Header />
-      <div className="flex w-full pt-20 lg:pt-24 2xl:pt-28 h-full text-center">
-        <div className="relative w-full flex flex-col items-center h-screen">
-          <div className="relative inline-block pointer-events-none">
+      <div className="flex w-full pt-24 lg:pt-24 2xl:pt-28 h-full text-center">
+        <div className="relative w-full flex flex-col items-center">
+          <div
+            className={`relative inline-block pointer-events-none ${currentPage === 2 || currentPage === 4 ? "opacity-100 translate-y-[0]" : "opacity-0 translate-y-[10px]"} delay-300 ease-in-out transition-all transform duration-700`}
+          >
             <img
               src="/images/text-decoration.png"
               alt="Text Decoration"
-              className="absolute z-0 left-0 w-[142px] -top-7 md:w-[216px] md:-top-12 lg:w-[256px] lg:-top-12 2xl:w-[333px] 2xl:-top-16"
+              className="absolute z-0 left-0 w-[172px] -top-7 md:w-[233px] md:-top-12 lg:w-[256px] lg:-top-12 2xl:w-[333px] 2xl:-top-16"
               loading="lazy"
             />
             <p className="relative headline z-10 text-white text-3xl">
@@ -28,8 +30,10 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             </p>
           </div>
 
-          <div className="mt-2 md:mt-2 2xl:mt-8 pointer-events-none">
-            <p className="subtext text-lightgrey">
+          <div className="mt-4 md:mt-2 2xl:mt-8 pointer-events-none">
+            <p
+              className={`subtext text-lightgrey ${currentPage === 2 || currentPage === 4 ? "opacity-100 translate-y-[0]" : "opacity-0 translate-y-[10px]"} delay-300 ease-in-out transition-all transform duration-700`}
+            >
               Social Media Betting is the future of how
               <br className="md:hidden" />
               ot make money online.
@@ -38,8 +42,10 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             </p>
           </div>
 
-          <div className="mt-2 lg:mt-4 2xl:mt-6">
-            <div className="inline-flex items-center gap-2 rounded-[10px] py-3 px-4 lg:py-3.5 lg:px-4 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
+          <div
+            className={`mt-4 lg:mt-4 2xl:mt-6 ${currentPage === 2 || currentPage === 4 ? "opacity-100 translate-y-[0]" : "opacity-0 translate-y-[10px]"} delay-300 ease-in-out transition-all transform duration-700`}
+          >
+            <div className="inline-flex items-center gap-2 lg:gap-4 rounded-xl py-3 px-4 lg:px-3.5 lg:py-3.5 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -55,67 +61,73 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
                 />
               </svg>
               <button>
-                <div className="download">Download Now</div>
+                <div className="download">Download now</div>
               </button>
             </div>
           </div>
 
-          {(currentPage === 2 || currentPage === 4) && (
-            <div>
-              <img
-                src="/images/phone2.png"
-                alt="Phone 2"
-                width={298}
-                height={190}
-                className="lg:w-[348px] lg:h-[240px] xl:w-[368px] xl:h-[260px] 2xl:w-[551px] 2xl:h-[341px] object-contain z-10"
-                loading="lazy"
+          <div
+            className={`pt-24 lg:pt-8 2xl:pt-16
+                ${currentPage === 2 || currentPage === 4 ? "opacity-100 translate-y-[0]" : "opacity-0 -translate-y-[20px]"}
+                transition-all transform duration-700 ease-in-out delay-300`}
+          >
+            <img
+              src="/images/phone2.png"
+              alt="Phone 2"
+              className="w-full max-w-xs md:max-w-md 2xl:max-w-lg h-auto object-contain z-20 relative"
+              loading="lazy"
+            />
+            <div className="absolute top-[36%] md:top-[44%] lg:top-[8%] xl:top-[6%] 2xl:top-[24%] left-1/2 transform -translate-x-1/2 z-10">
+              <Lottie
+                animationData={wave}
+                loop={true}
+                autoplay={true}
+                aria-label="Wave Animation"
+                className="w-[360px] md:w-[420px] lg:w-[580px] mx-auto"
               />
-              <div className="absolute top-[36%] md:top-[39%] lg:-top-[10%] xl:-top[38%] 2xl:top-[26%] left-1/2 transform -translate-x-1/2">
+              <div className="absolute bottom-14 md:bottom-20 lg:bottom-24 left-1/2 transform -translate-x-1/2">
                 <Lottie
-                  animationData={wave}
+                  animationData={line}
                   loop={true}
                   autoplay={true}
-                  aria-label="Wave Animation"
-                  className="w-[360px] lg:w-[540px] mx-auto"
+                  aria-label="Line Animation"
+                  className="w-[159px] md:w-[239px] lg:w-[259px] mx-auto"
                 />
-                <div className="absolute bottom-14 md:bottom-14 lg:bottom-20 left-1/2 transform -translate-x-1/2 z-10">
-                  <Lottie
-                    animationData={line}
-                    loop={true}
-                    autoplay={true}
-                    aria-label="line Animation"
-                    className="w-[159px] lg:w-[259px] mx-auto"
-                  />
-                </div>
               </div>
             </div>
-          )}
+          </div>
         </div>
       </div>
 
-      <div className="hidden xl:flex w-full">
-        <div className="absolute left-[10%] top-[17%] 2xl:left-[12%] 2xl:top-[13%]">
+      <div className="hidden lg:flex">
+        <div
+          className={`absolute left-[10%] top-[17%] lg:top-[15%] 2xl:left-[12%] 2xl:top-[14%] ${currentPage === 2 ? "opacity-100 translate-x-[0]" : "opacity-0 translate-x-[10px]"} delay-300 ease-in-out transition-all transform duration-700`}
+        >
           <img
             src="/images/left-top-image.png"
             alt="Left Top"
-            className="object-contain w-[208px] h-[208px] xl:w-[232px] xl:h-[232px] 2xl:w-[340px] 2xl:h-[340px]"
+            className="object-contain w-[208px] h-[208px] xl:w-[232px] xl:h-[232px] 2xl:w-[300px] 2xl:h-[300px]"
             loading="lazy"
           />
         </div>
-        <div className="absolute left-[6%] bottom-[17%] 2xl:left-[8%] 2xl:bottom-[10%]">
+        <div
+          className={`absolute left-[6%] bottom-[17%] lg:bottom-[22%] 2xl:left-[8%] 2xl:bottom-[18%] ${currentPage === 2 ? "opacity-100 translate-x-[0]" : "opacity-0 translate-x-[10px]"} delay-300 ease-in-out transition-all transform duration-700`}
+        >
           <img
             src="/images/left-bot-image.png"
             alt="Left Bottom"
-            className="object-contain w-[208px] h-[208px] xl:w-[232px] xl:h-[232px] 2xl:w-[340px] 2xl:h-[340px]"
+            className="object-contain w-[208px] h-[208px] xl:w-[232px] xl:h-[232px] 2xl:w-[300px] 2xl:h-[300px]"
             loading="lazy"
           />
         </div>
 
-        <div className="absolute right-[10%] top-[38%] xl:right-[6%] xl:top-[34%] 2xl:right-[6%]">
+        <div
+          className={`absolute right-[6%] top-[38%] xl:right-[6%] xl:top-[37%] 2xl:right-[6%] ${currentPage === 2 ? "opacity-100 translate-x-[0]" : "opacity-0 -translate-x-[10px]"} delay-300 ease-in-out transition-all transform duration-700`}
+        >
           <img
             src="/images/right-image.png"
             alt="Right"
-            className="object-contain w-[269px] h-[269px] xl:w-[279px] xl:h-[279px] 2xl:w-[389px] 2xl:h-[389px]"
+            className="object-contain w-[269px] h-[269px] xl:w-[259px] xl:h-[259px] 2xl:w-[349px] 2xl:h-[349px]"
             loading="lazy"
           />
         </div>

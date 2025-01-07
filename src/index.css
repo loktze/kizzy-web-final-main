@@ -44,6 +44,7 @@ html {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     line-height: 34px;
+    letter-spacing: -0.528px;
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -61,16 +62,16 @@ html {
 
 @media (min-width: 1537px) {
     .headline {
-        font-size: 70px;
-        line-height: 63px;
+        font-size: 60px;
+        line-height: 49px;
         letter-spacing: -0.154px;
     }
 }
 
 .subtext {
     font-family: "Lexend", sans-serif;
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 24px;
     letter-spacing: -0.176px;
 }
 
@@ -100,21 +101,21 @@ html {
     font-family: "Lexend", sans-serif;
     color: white;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 300;
     line-height: 18px;
     letter-spacing: -0.132px;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1023px) {
     .download {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
 .careers {
     font-family: "Lexend", sans-serif;
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     line-height: 21px;
     letter-spacing: -0.154px;
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 const P1Header: React.FC = () => {
   return (
-    <div className="absolute top-0 w-full bg-transparent p-3.5 md:p-5">
+    <div className="absolute top-0 w-full bg-transparent p-4 lg:p-6">
       <div className="flex justify-between items-center">
         <div>
           <button>
@@ -11,7 +11,7 @@ const P1Header: React.FC = () => {
               alt="Kizzy Dark Logo Mobile"
               width={69}
               height={28}
-              className="block xl:hidden"
+              className="block lg:hidden"
               loading="lazy"
             />
           </button>
@@ -21,7 +21,7 @@ const P1Header: React.FC = () => {
               alt="Kizzy dark Logo"
               width={142}
               height={58}
-              className="hidden xl:block"
+              className="hidden lg:block"
               loading="lazy"
             />
           </button>
@@ -33,14 +33,14 @@ const P1Header: React.FC = () => {
                 <p className="careers text-black">Careers</p>
               </button>
             </div>
-            <div className="inline-flex items-center gap-2 rounded-[10px] py-3 px-2.5 lg:px-4 lg:py-3 xl:rounded-2xl xl:py-[15px] shadow-xl:px-5 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
+            <div className="inline-flex items-center gap-2 lg:gap-4 rounded-xl py-3 px-4 lg:px-6 lg:py-4 xl:rounded-2xl bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={2.5}
                 stroke="white"
-                className="w-[17px] md:w-[22px]"
+                className="w-[17px] lg:w-[22px]"
               >
                 <path
                   strokeLinecap="round"
@@ -49,7 +49,7 @@ const P1Header: React.FC = () => {
                 />
               </svg>
               <button>
-                <div className="download">Download Now</div>
+                <div className="download">Download now</div>
               </button>
             </div>
           </div>

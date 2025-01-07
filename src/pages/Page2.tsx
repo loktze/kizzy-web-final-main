@@ -17,27 +17,26 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
     >
       <div className="flex pt-24 lg:pt-24 2xl:pt-28 w-full pointer-events-none">
         <div className="relative w-full flex flex-col items-center h-screen">
-          <div
-            className={`${currentPage === 1 ? "opacity-100" : "opacity-0"} delay-300 ease-in-out transition-opacity duration-700`}
+          <p
+            className={`${currentPage === 1 ? "opacity-100 translate-y-[0]" : "opacity-0 translate-y-[10px]"} delay-300 ease-in-out transition-all transform duration-700 headline text-3xl text-center`}
           >
-            <p
-              className={`${currentPage === 1 ? "translate-y-[0]" : "translate-y-[10px]"} delay-300 ease-in-out transition-transform duration-700 headline text-2xl text-center`}
-            >
-              Betting Like Never Before
-            </p>
-            <div className="mt-2 md:mt-2 xl:mt-2 2xl:mt-8">
-              <p className="subtext text-grey text-center">
-                Social media creators have taken over the world.
-                <br className="md:hidden" />
-                Why not bet on them?
-                <br />
-                Kizzy is the world’s first social media betting app.
-              </p>
-            </div>
-          </div>
+            Betting Like Never Before
+          </p>
 
-          <div className="mt-4 md:mt-6 md:hidden">
-            <div className="inline-flex items-center gap-2 rounded-[10px] py-3 px-4 lg:rounded-2xl lg:py-3 lg:px-4 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
+          <p
+            className={`pt-4 md:pt-6 2xl:pt-8 ${currentPage === 1 ? "opacity-100 translate-y-[0]" : "opacity-0 translate-y-[10px]"} delay-300 ease-in-out transition-all transform duration-700 subtext text-grey text-center`}
+          >
+            Social media creators have taken over the world.
+            <br className="md:hidden" />
+            Why not bet on them?
+            <br />
+            Kizzy is the world’s first social media betting app.
+          </p>
+
+          <div
+            className={`mt-4 md:mt-6 md:hidden ${currentPage === 1 ? "opacity-100 translate-y-[0]" : "opacity-0 translate-y-[10px]"} delay-300 ease-in-out transition-all transform duration-700 subtext text-grey text-center`}
+          >
+            <div className="inline-flex items-center gap-2 rounded-lg py-3 px-4 lg:rounded-2xl lg:py-3 lg:px-4 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -53,7 +52,7 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
                 />
               </svg>
               <button>
-                <div className="download 2xl:text-base">Download Now</div>
+                <div className="download 2xl:text-base">Download now</div>
               </button>
             </div>
           </div>
@@ -61,17 +60,25 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
       </div>
 
       <div className="hidden lg:flex">
-        <div className="absolute bottom-2 left-4 xl:left-20 2xl:left-48 slide-in-bottom">
-          <div className="mb-2">
+        <div className="absolute bottom-2 left-4 xl:left-20 2xl:left-48">
+          <div
+            className={`${currentPage === 1 ? "translate-y-[0]" : "translate-y-[50px]"} mb-2 delay-[500ms] ease-in-out transition-transform duration-1000`}
+          >
             <FirstTopCard />
           </div>
-          <div>
+          <div
+            className={`${currentPage === 1 ? "translate-y-[0]" : "translate-y-[50px]"} delay-300 ease-in-out transition-transform duration-1000`}
+          >
             <FirstBottomCard />
           </div>
         </div>
 
-        <div className="absolute bottom-2 right-4 xl:right-20 2xl:right-48">
-          <div className="mb-2">
+        <div
+          className={`${currentPage === 1 ? "translate-y-[0]" : "translate-y-[50px]"} absolute bottom-2 right-4 xl:right-20 2xl:right-48 delay-300 ease-in-out transition-transform duration-700`}
+        >
+          <div
+            className={`${currentPage === 1 ? "translate-y-[0]" : "translate-y-[50px]"} mb-2 delay-300 ease-in-out transition-transform duration-700`}
+          >
             <SecondTopCard />
           </div>
           <div>
