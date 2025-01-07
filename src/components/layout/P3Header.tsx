@@ -12,7 +12,6 @@ const P3Header: React.FC = () => {
               width={69}
               height={28}
               className="block lg:hidden"
-              loading="lazy"
             />
           </button>
           <button>
@@ -22,7 +21,6 @@ const P3Header: React.FC = () => {
               width={142}
               height={58}
               className="hidden lg:block"
-              loading="lazy"
             />
           </button>
         </div>

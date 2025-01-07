@@ -23,7 +23,6 @@ const SecondTopCard: React.FC<SecondTopCardProps> = ({ className }) => {
                 width={79}
                 height={79}
                 className="object-contain"
-                loading="lazy"
               />
               <div className="flex flex-col justify-center flex-1 gap-1.5">
                 <TruncatedText
@@ -42,7 +41,6 @@ const SecondTopCard: React.FC<SecondTopCardProps> = ({ className }) => {
                 width={41}
                 height={18}
                 className="object-contain"
-                loading="lazy"
               />
               <img
                 src="/images/up_green.png"
@@ -50,7 +48,6 @@ const SecondTopCard: React.FC<SecondTopCardProps> = ({ className }) => {
                 width={39}
                 height={29}
                 className="object-contain"
-                loading="lazy"
               />
             </div>
           </div>
@@ -68,7 +65,6 @@ const SecondTopCard: React.FC<SecondTopCardProps> = ({ className }) => {
                       width={13}
                       height={13}
                       className="object-contain"
-                      loading="lazy"
                     />
                     <p className="font-lexend text-sm text-yellow font-semibold">
                       15,153

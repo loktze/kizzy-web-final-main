@@ -16,7 +16,6 @@ const FirstTopCard: React.FC<FirstTopCardProps> = ({ className }) => {
           width={120}
           height={70}
           className="rounded-lg object-cover"
-          loading="lazy"
         />
         <div className="flex flex-col justify-center flex-1 gap-2">
           <TruncatedText
@@ -36,7 +35,6 @@ const FirstTopCard: React.FC<FirstTopCardProps> = ({ className }) => {
           width={184}
           height={47}
           className="absolute bottom-0 left-0 object-cover"
-          loading="lazy"
           initial={{ scale: 1 }}
           animate={{ scale: [1, 0.8, 1] }}
           transition={{
@@ -52,7 +50,6 @@ const FirstTopCard: React.FC<FirstTopCardProps> = ({ className }) => {
           width={148}
           height={42}
           className="absolute bottom-0 right-0 object-cover"
-          loading="lazy"
         />
       </div>
     </div>

@@ -21,7 +21,6 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
               src="/images/text-decoration.png"
               alt="Text Decoration"
               className="absolute z-0 left-0 w-[172px] -top-7 md:w-[233px] md:-top-12 lg:w-[256px] lg:-top-12 2xl:w-[333px] 2xl:-top-16"
-              loading="lazy"
             />
             <p className="relative headline z-10 text-white text-3xl">
               Start Social Media
@@ -75,7 +74,6 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
               src="/images/phone2.png"
               alt="Phone 2"
               className="w-full max-w-xs md:max-w-md 2xl:max-w-lg h-auto object-contain z-20 relative"
-              loading="lazy"
             />
             <div className="absolute top-[36%] md:top-[44%] lg:top-[8%] xl:top-[6%] 2xl:top-[24%] left-1/2 transform -translate-x-1/2 z-10">
               <Lottie
@@ -107,7 +105,6 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             src="/images/left-top-image.png"
             alt="Left Top"
             className="object-contain w-[208px] h-[208px] xl:w-[232px] xl:h-[232px] 2xl:w-[300px] 2xl:h-[300px]"
-            loading="lazy"
           />
         </div>
         <div
@@ -117,7 +114,6 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             src="/images/left-bot-image.png"
             alt="Left Bottom"
             className="object-contain w-[208px] h-[208px] xl:w-[232px] xl:h-[232px] 2xl:w-[300px] 2xl:h-[300px]"
-            loading="lazy"
           />
         </div>
 
@@ -128,7 +124,6 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             src="/images/right-image.png"
             alt="Right"
             className="object-contain w-[269px] h-[269px] xl:w-[259px] xl:h-[259px] 2xl:w-[349px] 2xl:h-[349px]"
-            loading="lazy"
           />
         </div>
       </div>

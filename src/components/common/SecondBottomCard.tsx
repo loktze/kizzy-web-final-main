@@ -16,7 +16,6 @@ const SecondBottomCard: React.FC<SecondBottomCardProps> = ({ className }) => {
             width={36}
             height={36}
             className="object-contain"
-            loading="lazy"
           />
           <div className="flex flex-col justify-center flex-1">
             <div className="flex gap-0.5">
@@ -31,7 +30,6 @@ const SecondBottomCard: React.FC<SecondBottomCardProps> = ({ className }) => {
                 width={14}
                 height={14}
                 className="object-contain"
-                loading="lazy"
               />
               <img
                 src="/images/twitter-x.png"
@@ -39,7 +37,6 @@ const SecondBottomCard: React.FC<SecondBottomCardProps> = ({ className }) => {
                 width={10}
                 height={10}
                 className="object-contain"
-                loading="lazy"
               />
             </div>
             <p className="font-lexend text-xs text-[#A3A3A3]">@elonmusk</p>
@@ -84,7 +81,6 @@ const SecondBottomCard: React.FC<SecondBottomCardProps> = ({ className }) => {
           width={320}
           height={176}
           className="object-contain mx-auto"
-          loading="lazy"
         />
       </div>
     </div>

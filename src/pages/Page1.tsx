@@ -17,7 +17,7 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
           width={425}
           height={772}
           className="block md:hidden absolute top-20 left-[16px]"
-          loading="lazy"
+
         />
       </div>
 
@@ -26,7 +26,7 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
           src="/images/hand-md.png"
           alt="Hand"
           className="absolute w-[900px] left-[13%] top-16 lg:top-0 lg:-right-10 xl:top-0"
-          loading="lazy"
+
         />
       </div>
 
@@ -35,7 +35,7 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
           src="/images/hand.png"
           alt="Hand"
           className="w-[1106px] h-auto"
-          loading="lazy"
+
         />
       </div> */}
 

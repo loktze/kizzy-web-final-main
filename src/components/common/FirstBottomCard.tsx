@@ -1,5 +1,5 @@
-import React from 'react';
-import TruncatedText from '../TruncatedText';
+import React from "react";
+import TruncatedText from "../TruncatedText";
 
 interface FirstBottomCardProps {
   className?: string;
@@ -7,17 +7,13 @@ interface FirstBottomCardProps {
 
 const FirstBottomCard: React.FC<FirstBottomCardProps> = ({ className }) => {
   return (
-    <div
-
-      className="w-[340px] bg-[#fff] rounded-2xl p-4 shadow-2xl pointer-events-none"
-    >
+    <div className="w-[340px] bg-[#fff] rounded-2xl p-4 shadow-2xl pointer-events-none">
       <div className="flex justify-between items-center">
         <img
           src="/images/youtube-logo.png"
           alt="YouTube Logo"
           width={43}
           height={30}
-          loading="lazy"
         />
         <div className="flex items-center justify-between gap-8 bg-[#F3F3F7] rounded-full px-5 py-2">
           <TruncatedText
@@ -48,7 +44,6 @@ const FirstBottomCard: React.FC<FirstBottomCardProps> = ({ className }) => {
           alt="YouTube Post"
           width={322}
           height={181}
-          loading="lazy"
         />
       </div>
       <div className="mt-3 flex gap-2.5 items-start">
@@ -59,7 +54,6 @@ const FirstBottomCard: React.FC<FirstBottomCardProps> = ({ className }) => {
             width={36}
             height={36}
             className="object-contain"
-            loading="lazy"
           />
         </div>
         <div className="flex flex-col justify-center flex-1 gap-0.5">
@@ -68,8 +62,12 @@ const FirstBottomCard: React.FC<FirstBottomCardProps> = ({ className }) => {
             maxLength={21}
             className="font-lexend text-md text-[#0E1727] font-semibold"
           />
-          <p className="font-lexend text-sm text-[#A3A3A3]">@IShowSpeed . 3280m followers</p>
-          <p className="font-lexend rounded-3xl bg-black text-xs text-white px-2 py-1 mt-2 w-fit">Follow</p>
+          <p className="font-lexend text-sm text-[#A3A3A3]">
+            @IShowSpeed . 3280m followers
+          </p>
+          <p className="font-lexend rounded-3xl bg-black text-xs text-white px-2 py-1 mt-2 w-fit">
+            Follow
+          </p>
         </div>
       </div>
     </div>

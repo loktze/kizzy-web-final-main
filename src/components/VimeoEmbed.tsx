@@ -59,7 +59,6 @@ const VimeoEmbed: React.FC<VimeoEmbedProps> = ({
             borderRadius: "2.5rem",
           }}
           title="Embedded Vimeo Video Player"
-          loading="lazy"
           aria-label="Embedded Vimeo video player"
           onError={(e) => {
             console.error("Vimeo video failed to load:", e);

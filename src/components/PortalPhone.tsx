@@ -44,11 +44,7 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({ currentPage }) => {
               src="/images/phone.png"
               alt="Portal Phone Display"
               className={phoneClassName}
-              loading="lazy"
               onLoad={handleImageLoad}
-              style={{
-                willChange: "transform, opacity",
-              }}
             />
           )}
 
