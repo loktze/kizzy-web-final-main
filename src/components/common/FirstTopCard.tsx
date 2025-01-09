@@ -24,7 +24,7 @@ const FirstTopCard: React.FC<FirstTopCardProps> = ({ className }) => {
             className="font-lexend text-md text-[#0E1727] font-semibold leading-6 tracking-tight"
           />
           <p className="font-lexend text-sm text-[#A3A3A3]">
-            @IShowSpeed | Likes
+            @IShowSpeed | Views
           </p>
         </div>
       </div>

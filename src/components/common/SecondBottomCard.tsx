@@ -64,13 +64,11 @@ const SecondBottomCard: React.FC<SecondBottomCardProps> = ({ className }) => {
           </div>
         </div>
       </div>
-      <div className="flex mt-1">
+      <div className="flex mt-2">
         <p className="font-lexend text-xs text-black">
-          I am increasingly convinced that
+          I am increasingly convinced that @Neuralink should
           <br />
-          @Neuralink
-          <br />
-          should prioritize making an implant that can eliminate back & neck
+          prioritize making an implant that can eliminate back & neck
           pain.
         </p>
       </div>

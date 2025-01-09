@@ -54,7 +54,7 @@ const SecondTopCard: React.FC<SecondTopCardProps> = ({ className }) => {
           <div className="relative bg-[#EFEFEF] py-3 px-5 rounded-b-2xl">
             <div>
               <p className="font-lexend text-xs text-[#07010D] font-semibold">
-                7 Days Stranded On An Island
+                I am increasingly convinced…
               </p>
               <div className="flex justify-between items-center mt-2">
                 <div className="flex gap-9">
@@ -72,7 +72,7 @@ const SecondTopCard: React.FC<SecondTopCardProps> = ({ className }) => {
                   </div>
                   <div className="flex items-center">
                     <p className="text-purple font-semibold text-sm">
-                      123k{" "}
+                      35m{" "}
                       <span className="font-lexend text-sm font-normal">
                         {" "}
                         Views{" "}

@@ -26,7 +26,7 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
           <p
             className={`pt-4 md:pt-6 2xl:pt-8 ${currentPage === 1 ? "opacity-100 translate-y-[0]" : "opacity-0 translate-y-[10px]"} delay-300 ease-in-out transition-all transform duration-700 subtext text-grey text-center`}
           >
-            Social media creators have taken over the world.
+            Social media creators have taken over the world.{" "}
             <br className="md:hidden" />
             Why not bet on them?
             <br />

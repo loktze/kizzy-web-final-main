@@ -20,9 +20,9 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             <img
               src="/images/text-decoration.png"
               alt="Text Decoration"
-              className="absolute z-0 left-0 w-[172px] -top-7 md:w-[233px] md:-top-12 lg:w-[256px] lg:-top-12 2xl:w-[333px] 2xl:-top-16"
+              className="absolute z-0 left-1 w-[154px] -top-[25px] md:w-[194px] md:-top-9 lg:w-[232px] lg:-top-[42px] 2xl:w-[305px] 2xl:-top-[60px]"
             />
-            <p className="relative headline z-10 text-white text-3xl">
+            <p className="relative headline tracking-[-0.66px] z-10 text-white text-3xl">
               Start Social Media
               <br />
               Betting Now
@@ -33,9 +33,9 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             <p
               className={`subtext text-lightgrey ${currentPage === 2 || currentPage === 4 ? "opacity-100 translate-y-[0]" : "opacity-0 translate-y-[10px]"} delay-300 ease-in-out transition-all transform duration-700`}
             >
-              Social Media Betting is the future of how
+              Social Media Betting is the future of how{" "}
               <br className="md:hidden" />
-              ot make money online.
+              to make money online.
               <br />
               What are you waiting for?
             </p>
@@ -129,17 +129,14 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
       </div>
 
       <footer className="absolute bottom-0 w-full bg-transparent">
-        <div className="flex justify-center md:hidden">
+        <div className="flex justify-center lg:hidden">
           <div className="flex gap-4 pb-8 2xl:gap-6">
             <p className="p3footer">&copy; Kizzy Labs</p>
             <p className="p3footer">Privacy Policy</p>
           </div>
         </div>
-        <div className="hidden md:flex justify-center">
-          <div className="font-lexend flex gap-4 pb-8 2xl:pb-6">
-            <button>
-              <p className="p3footer">Career</p>
-            </button>
+        <div className="hidden lg:flex justify-center">
+          <div className="flex gap-4 pb-8 2xl:pb-6">
             <button>
               <p className="p3footer">&copy; Kizzy Labs</p>
             </button>

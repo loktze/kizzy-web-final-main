@@ -14,6 +14,20 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Hide scrollbar for all browsers */
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+
 .font-lexend {
     font-family: "Lexend", sans-serif;
 }
@@ -44,12 +58,13 @@ html {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     line-height: 34px;
-    letter-spacing: -0.528px;
+
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
     .headline {
         font-size: 38px;
+        line-height: 38px;
     }
 }
 
@@ -64,7 +79,6 @@ html {
     .headline {
         font-size: 60px;
         line-height: 49px;
-        letter-spacing: -0.154px;
     }
 }
 
