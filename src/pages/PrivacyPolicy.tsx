@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import P1Header from "../components/layout/P1Header";
 
 const PrivacyPolicy: React.FC = () => {
   const navigate = useNavigate();
@@ -14,7 +13,6 @@ const PrivacyPolicy: React.FC = () => {
       style={{ backgroundImage: "url('/images/background.png')" }}
       onTouchStart={(e) => e.stopPropagation()} // Prevent interference with App.tsx
     >
-      <P1Header />
       <div className="flex flex-col gap-4 xl:gap-6 justify-center pt-20 xl:pt-32">
         <p className="headline text-2xl text-center">
           Our commitment to

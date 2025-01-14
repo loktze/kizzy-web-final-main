@@ -7,7 +7,7 @@ interface Page1Props {
 const Page1: React.FC<Page1Props> = ({ currentPage }) => {
   return (
     <div
-      className="relative h-screen flex bg-cover bg-center"
+      className="relative h-screen max-w-[2000px] mx-auto flex bg-cover bg-center"
       style={{ backgroundImage: "url('/images/background.png')" }}
     >
       {/* <div className="relative w-full">

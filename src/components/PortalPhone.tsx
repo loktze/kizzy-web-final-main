@@ -16,23 +16,29 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({ currentPage }) => {
   const shouldShowPhone =
     (isLarge || isMedium) && (currentPage === 0 || currentPage === 1);
 
-  const phoneClassName = `${shouldShowPhone ? "w-[227px] h-[466px] lg:w-[302px] lg:h-[621px] object-contain" : ""}`;
+  const phoneClassName = `${shouldShowPhone ? "w-[227px] h-[466px] lg:w-[302px] lg:h-[621px] object-contain" : ""
+    }`;
 
   const handleImageLoad = () => {
     setIsImageLoaded(true);
   };
 
   const animationValues =
-    currentPage === 1 && isLarge
-      ? "scale-[1.3] translate-y-[260px]"
-      : currentPage === 1 && isMedium
-        ? "scale-[1.55] translate-y-[280px]"
-        : "scale-100 translate-y-0";
+    currentPage === 0
+      ? "phone-center"
+      : currentPage === 1 && isLarge
+        ? "phone-drop-large"
+        : currentPage === 1 && isMedium
+          ? "phone-drop-medium"
+          : "phone-hidden";
 
   const videoId = "1033441094";
 
   return (
-    <div className="fixed inset-0 flex items-center scale-110  justify-center pointer-events-none">
+    <div
+      className={`${currentPage === 1 ? "absolute" : "fixed"
+        } inset-0 flex items-center justify-center pointer-events-none`}
+    >
       <div
         className={`${animationValues} relative pointer-events-none duration-500 transition-transform ease-in-out`}
       >

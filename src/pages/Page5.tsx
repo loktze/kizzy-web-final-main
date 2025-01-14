@@ -9,7 +9,7 @@ interface Page5Props {
 const Page5: React.FC<Page5Props> = ({ currentPage }) => {
   return (
     <div
-      className="relative h-screen flex flex-col bg-cover bg-center"
+      className="relative h-screen max-w-[1200px] mx-auto flex flex-col bg-cover bg-center"
       style={{ backgroundImage: "url('/images/background.png')" }}
     >
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">

@@ -13,7 +13,7 @@ import Page4 from "./pages/Page4";
 import Page5 from "./pages/Page5";
 import PortalPhone from "./components/PortalPhone";
 import useMediaQuery from "./hooks/useMediaQuery";
-import P1Header from "./components/layout/P1Header";
+import Header from "./components/layout/Header";
 // import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
@@ -79,8 +79,9 @@ function App() {
   }, [handleScroll]);
 
   const showHeader =
-    (isMedium && [0, 1, 2, 3].includes(currentPage)) ||
-    (isLarge && [0, 1].includes(currentPage));
+    (isMedium && [0, 1, 2, 3, 4].includes(currentPage)) ||
+    (isLarge && [0, 1, 2].includes(currentPage));
+
 
   return (
     <Router>
@@ -90,8 +91,8 @@ function App() {
           element={
             <>
               {showHeader && (
-                <div className="fixed top-0 left-0 w-full z-10">
-                  <P1Header />
+                <div className="fixed top-0 left-0 w-full z-30">
+                  <Header currentPage={currentPage} isMedium={isMedium} />
                 </div>
               )}
               <div
