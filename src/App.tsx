@@ -78,6 +78,20 @@ function App() {
     }
   }, [handleScroll]);
 
+  // Disable scrolling on Page2
+  useEffect(() => {
+    const body = document.body;
+    if (currentPage === 1) {
+      body.classList.add("no-scroll");
+    } else {
+      body.classList.remove("no-scroll");
+    }
+
+    return () => {
+      body.classList.remove("no-scroll");
+    };
+  }, [currentPage]);
+
   const showHeader =
     (isMedium && [0, 1, 2, 3, 4].includes(currentPage)) ||
     (isLarge && [0, 1, 2].includes(currentPage));

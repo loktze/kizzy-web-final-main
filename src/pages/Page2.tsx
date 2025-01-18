@@ -11,7 +11,7 @@ interface Page2Props {
 const Page2: React.FC<Page2Props> = ({ currentPage }) => {
   return (
     <div
-      className="relative h-screen max-w-[2000px] mx-auto flex flex-col bg-cover bg-center"
+      className="relative h-screen max-w-[2000px] mx-auto flex flex-col bg-cover bg-center overflow-hidden"
       style={{ backgroundImage: "url('/images/background.png')" }}
       onTouchStart={(e) => e.stopPropagation()}
     >

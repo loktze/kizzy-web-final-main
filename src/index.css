@@ -183,6 +183,13 @@ html {
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
+/* Disable scrolling */
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}
+
+
 /* Dropping down (Page 1) */
 .phone-drop-large {
     transform: scale(1.3) translateY(190px);
