@@ -1,5 +1,4 @@
-// PortalPhone.jsx
-import React, { useRef, useState, memo } from "react";
+import React, { useRef, useState } from "react";
 import VimeoEmbed from "./VimeoEmbed";
 import useMediaQuery from "../hooks/useMediaQuery";
 
@@ -7,64 +6,65 @@ interface PortalPhoneProps {
   currentPage: number;
 }
 
-const PortalPhone: React.FC<PortalPhoneProps> = memo(({ currentPage }) => {
+const PortalPhone: React.FC<PortalPhoneProps> = ({ currentPage }) => {
   const phoneRef = useRef<HTMLImageElement>(null);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   const isLarge = useMediaQuery("(min-width: 1024px)");
   const isMedium = useMediaQuery("(max-width: 1023px)");
 
-  // Show PortalPhone only on Page1 and Page2
   const shouldShowPhone =
     (isLarge || isMedium) && (currentPage === 0 || currentPage === 1);
 
   const phoneClassName = `${
     shouldShowPhone
-      ? "w-[227px] h-[466px] lg:w-[302px] lg:h-[621px] object-contain transition-transform transition-opacity duration-700"
-      : "hidden"
+      ? "w-[227px] h-[466px] lg:w-[302px] lg:h-[621px] object-contain"
+      : ""
   }`;
 
   const handleImageLoad = () => {
     setIsImageLoaded(true);
   };
 
-  // Define animation classes based on currentPage and screen size
-  const getAnimationClasses = () => {
-    if (!shouldShowPhone) return "";
+  const animationValues =
+    currentPage === 0
+      ? "phone-center"
+      : currentPage === 1 && isLarge
+        ? "phone-drop-large"
+        : currentPage === 1 && isMedium
+          ? "phone-drop-medium"
+          : "phone-hidden";
 
-    if (currentPage === 0) {
-      // Centered position for Page1
-      return isLarge
-        ? "fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100"
-        : "relative mx-auto opacity-100";
-    } else if (currentPage === 1) {
-      // Dropdown position for Page2
-      return isLarge
-        ? "fixed top-[70%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100"
-        : "relative mx-auto opacity-100 translate-y-10";
-    } else {
-      // Hidden on other pages
-      return "opacity-0";
-    }
-  };
+  const videoId = "1033441094";
 
   return (
-    <>
-      {shouldShowPhone && (
-        <div className={`${getAnimationClasses()} pointer-events-none`}>
-          <img
-            ref={phoneRef}
-            src="/images/phone.png"
-            alt="Portal Phone Display"
-            className={phoneClassName}
-            onLoad={handleImageLoad}
-          />
-          {isImageLoaded && (
-            <VimeoEmbed
-              videoId="1033441094"
-              width="94%"
-              height="98%"
-              className={`
+    <div
+      className={`${
+        currentPage === 1 ? "absolute" : "fixed"
+      } inset-0 flex items-center justify-center pointer-events-none`}
+    >
+      <div
+        className={`${animationValues} relative pointer-events-none duration-500 transition-transform ease-in-out`}
+      >
+        <div className="relative w-full h-full">
+          {shouldShowPhone && (
+            <img
+              key="phone"
+              ref={phoneRef}
+              src="/images/phone.png"
+              alt="Portal Phone Display"
+              className={phoneClassName}
+              onLoad={handleImageLoad}
+            />
+          )}
+
+          <VimeoEmbed
+            key={`vimeo-${videoId}`}
+            isVisible={currentPage === 0}
+            videoId="1033441094"
+            width="94%"
+            height="98%"
+            className={`
                 absolute
                 top-1/2
                 left-1/2
@@ -77,18 +77,16 @@ const PortalPhone: React.FC<PortalPhoneProps> = memo(({ currentPage }) => {
                 pointer-events-none
                 transition-opacity
                 ease-in-out
-                ${currentPage === 0 ? "opacity-100" : "opacity-0"}
+                ${currentPage === 0 && isImageLoaded ? "opacity-100" : "opacity-0"}
               `}
-              autoplay={true}
-              loop={true}
-              muted={true}
-              isVisible={currentPage === 0 || currentPage === 1}
-            />
-          )}
+            autoplay={true}
+            loop={true}
+            muted={true}
+          />
         </div>
-      )}
-    </>
+      </div>
+    </div>
   );
-});
+};
 
 export default PortalPhone;

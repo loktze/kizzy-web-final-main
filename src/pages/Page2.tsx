@@ -3,7 +3,6 @@ import FirstTopCard from "../components/common/FirstTopCard";
 import FirstBottomCard from "../components/common/FirstBottomCard";
 import SecondTopCard from "../components/common/SecondTopCard";
 import SecondBottomCard from "../components/common/SecondBottomCard";
-import PortalPhone from "../components/PortalPhone";
 
 interface Page2Props {
   currentPage: number;
@@ -16,7 +15,6 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
       style={{ backgroundImage: "url('/images/background.png')" }}
       onTouchStart={(e) => e.stopPropagation()}
     >
-      <PortalPhone currentPage={currentPage} />
       <div className="flex pt-24 lg:pt-24 2xl:pt-28 w-full pointer-events-none">
         <div className="relative w-full flex flex-col items-center h-screen">
           <p

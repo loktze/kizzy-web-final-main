@@ -1,5 +1,4 @@
 import React from "react";
-import PortalPhone from "../components/PortalPhone";
 
 interface Page1Props {
   currentPage: number;
@@ -11,7 +10,6 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
       className="relative h-screen max-w-[2000px] mx-auto flex bg-cover bg-center"
       style={{ backgroundImage: "url('/images/background.png')" }}
     >
-      <PortalPhone currentPage={currentPage} />
       {/* <div className="relative w-full">
         <img
           src="/images/hand-mobile.png"
