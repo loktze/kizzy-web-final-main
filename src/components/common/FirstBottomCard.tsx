@@ -40,14 +40,14 @@ const FirstBottomCard: React.FC<FirstBottomCardProps> = ({ className }) => {
       </div>
       <div className="flex justify-center items-center mt-3.5">
         <video
-          src="/videos/Test.webm" // Path to your WebM video
+          src="/videos/youtube_video.webm"
           autoPlay
           muted
           loop
           playsInline
-          width={322} // Set the width
-          height={181} // Set the height
-          className="rounded-md shadow-md" // Optional styling
+          width={322}
+          height={181}
+          className="rounded-md shadow-md"
         />
       </div>
       <div className="mt-3 flex gap-2.5 items-start">

@@ -68,17 +68,19 @@ const SecondBottomCard: React.FC<SecondBottomCardProps> = ({ className }) => {
         <p className="font-lexend text-xs text-black">
           I am increasingly convinced that @Neuralink should
           <br />
-          prioritize making an implant that can eliminate back & neck
-          pain.
+          prioritize making an implant that can eliminate back & neck pain.
         </p>
       </div>
       <div className="flex pt-2">
-        <img
-          src="/images/twitter-post.png"
-          alt="Twitter Post"
-          width={320}
-          height={176}
-          className="object-contain mx-auto"
+        <video
+          src="/videos/twitter_video.webm" // Path to your WebM video
+          autoPlay
+          muted
+          loop
+          playsInline
+          width={322}
+          height={181}
+          className="rounded-md shadow-md"
         />
       </div>
     </div>

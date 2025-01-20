@@ -2,25 +2,23 @@ import React from "react";
 
 interface HeaderProps {
   currentPage: number;
-  isMedium: boolean; // Prop to indicate if the device is medium or smaller
+  isMedium: boolean;
 }
 
 const Header: React.FC<HeaderProps> = ({ currentPage, isMedium }) => {
-  // Determine styles based on currentPage and screen size
-  const isPage3 = currentPage === 4 && isMedium; // Page 3 on medium or smaller devices
-  const isPage3Large = currentPage === 2 && !isMedium; // Page 3 on large devices
+  const isPage3 = currentPage === 4 && isMedium;
+  const isPage3Large = currentPage === 2 && !isMedium;
 
   return (
     <div className="absolute top-0 w-full bg-transparent p-4 lg:p-6">
       <div className="max-w-[2000px] mx-auto flex justify-between items-center">
-        {/* Logo Section */}
         <div>
           <button>
             <img
               src={
                 isPage3 || isPage3Large
-                  ? "/images/kizzy-light-logo-mobile.png" // Light logo for Page 3
-                  : "/images/kizzy-dark-logo-mobile.png" // Dark logo for other pages
+                  ? "/images/kizzy-light-logo-mobile.png"
+                  : "/images/kizzy-dark-logo-mobile.png"
               }
               alt={
                 isPage3 || isPage3Large
@@ -36,13 +34,11 @@ const Header: React.FC<HeaderProps> = ({ currentPage, isMedium }) => {
             <img
               src={
                 isPage3 || isPage3Large
-                  ? "/images/kizzy-light-logo.png" // Light logo for Page 3
-                  : "/images/kizzy-dark-logo.png" // Dark logo for other pages
+                  ? "/images/kizzy-light-logo.png"
+                  : "/images/kizzy-dark-logo.png"
               }
               alt={
-                isPage3 || isPage3Large
-                  ? "Kizzy Light Logo"
-                  : "Kizzy Dark Logo"
+                isPage3 || isPage3Large ? "Kizzy Light Logo" : "Kizzy Dark Logo"
               }
               width={142}
               height={58}
@@ -51,22 +47,20 @@ const Header: React.FC<HeaderProps> = ({ currentPage, isMedium }) => {
           </button>
         </div>
 
-        {/* Careers and Download Section */}
         <div>
           <div className="flex items-center gap-14">
-            {/* Careers Text */}
             <div className="hidden md:block">
               <button>
                 <p
-                  className={`careers ${isPage3 || isPage3Large ? "text-white" : "text-black"
-                    }`}
+                  className={`careers ${
+                    isPage3 || isPage3Large ? "text-white" : "text-black"
+                  }`}
                 >
                   Careers
                 </p>
               </button>
             </div>
 
-            {/* Download Button */}
             <button className="inline-flex items-center gap-2 lg:gap-4 rounded-xl py-3 px-4 lg:px-6 lg:py-4 xl:rounded-2xl bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

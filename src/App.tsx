@@ -104,7 +104,7 @@ function App() {
           element={
             <>
               {showHeader && (
-                <div className="fixed top-0 left-0 w-full z-30">
+                <div className="fixed top-0 left-0 w-full z-[9999]">
                   <Header currentPage={currentPage} isMedium={isMedium} />
                 </div>
               )}

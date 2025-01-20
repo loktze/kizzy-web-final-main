@@ -10,7 +10,7 @@ const Page4: React.FC<Page4Props> = ({ currentPage }) => {
   return (
     <div className="relative z-20">
       <div
-        className="relative h-screen max-w-[1200px] mx-auto flex flex-col bg-cover bg-center"
+        className="relative h-screen max-w-[1200px] mx-auto flex flex-col bg-cover bg-center z-[9999]"
         style={{ backgroundImage: "url('/images/background.png')" }}
       >
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">

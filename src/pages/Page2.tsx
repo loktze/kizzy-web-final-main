@@ -59,8 +59,6 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full h-96 pointer-events-none bg-gradient-to-t from-white via-white/80 via-40% to-transparent z-20"></div>
-
       <div className="hidden lg:flex">
         <div className="absolute bottom-2 left-4 xl:left-20 2xl:left-48">
           <div

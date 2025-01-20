@@ -38,11 +38,7 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({ currentPage }) => {
   const videoId = "1033441094";
 
   return (
-    <div
-      className={`${
-        currentPage === 1 ? "absolute" : "fixed"
-      } inset-0 flex items-center justify-center pointer-events-none`}
-    >
+    <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-30">
       <div
         className={`${animationValues} relative pointer-events-none duration-500 transition-transform ease-in-out`}
       >
@@ -85,6 +81,9 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({ currentPage }) => {
           />
         </div>
       </div>
+      {currentPage === 1 && (
+        <div className="absolute bottom-0 left-0 inset-0 pointer-events-none bg-gradient-to-t from-white via-white/10 via-30% to-transparent z-[9999]"></div>
+      )}
     </div>
   );
 };
