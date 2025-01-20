@@ -3,6 +3,7 @@ import FirstTopCard from "../components/common/FirstTopCard";
 import FirstBottomCard from "../components/common/FirstBottomCard";
 import SecondTopCard from "../components/common/SecondTopCard";
 import SecondBottomCard from "../components/common/SecondBottomCard";
+import PortalPhone from "../components/PortalPhone";
 
 interface Page2Props {
   currentPage: number;
@@ -15,6 +16,7 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
       style={{ backgroundImage: "url('/images/background.png')" }}
       onTouchStart={(e) => e.stopPropagation()}
     >
+      <PortalPhone currentPage={currentPage} />
       <div className="flex pt-24 lg:pt-24 2xl:pt-28 w-full pointer-events-none">
         <div className="relative w-full flex flex-col items-center h-screen">
           <p
@@ -64,23 +66,27 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
       <div className="hidden lg:flex">
         <div className="absolute bottom-2 left-4 xl:left-20 2xl:left-48">
           <div
-            className={`${currentPage === 1 ? "translate-y-[0]" : "translate-y-[50px]"
-              } mb-4 ease-in-out transition-transform duration-700 delay-500`}
+            className={`${
+              currentPage === 1 ? "translate-y-[0]" : "translate-y-[50px]"
+            } mb-4 ease-in-out transition-transform duration-700 delay-500`}
           >
             <div
-              className={`${currentPage === 1 ? "opacity-100" : "opacity-0"
-                } transition-opacity duration-500 delay-700`}
+              className={`${
+                currentPage === 1 ? "opacity-100" : "opacity-0"
+              } transition-opacity duration-500 delay-700`}
             >
               <FirstTopCard />
             </div>
           </div>
           <div
-            className={`${currentPage === 1 ? "translate-y-[0]" : "translate-y-[50px]"
-              } ease-in-out transition-transform duration-700 delay-300`}
+            className={`${
+              currentPage === 1 ? "translate-y-[0]" : "translate-y-[50px]"
+            } ease-in-out transition-transform duration-700 delay-300`}
           >
             <div
-              className={`${currentPage === 1 ? "opacity-100" : "opacity-0"
-                } transition-opacity duration-500 delay-300`}
+              className={`${
+                currentPage === 1 ? "opacity-100" : "opacity-0"
+              } transition-opacity duration-500 delay-300`}
             >
               <FirstBottomCard />
             </div>
@@ -88,30 +94,34 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
         </div>
         <div className="absolute bottom-2 right-4 xl:right-20 2xl:right-48">
           <div
-            className={`${currentPage === 1 ? "translate-y-[0]" : "translate-y-[50px]"
-              } mb-4 ease-in-out transition-transform duration-700 delay-500`}
+            className={`${
+              currentPage === 1 ? "translate-y-[0]" : "translate-y-[50px]"
+            } mb-4 ease-in-out transition-transform duration-700 delay-500`}
           >
             <div
-              className={`${currentPage === 1 ? "opacity-100" : "opacity-0"
-                } transition-opacity duration-500 delay-700`}
+              className={`${
+                currentPage === 1 ? "opacity-100" : "opacity-0"
+              } transition-opacity duration-500 delay-700`}
             >
               <SecondTopCard />
             </div>
           </div>
           <div
-            className={`${currentPage === 1 ? "translate-y-[0]" : "translate-y-[50px]"
-              } ease-in-out transition-transform duration-700 delay-300`}
+            className={`${
+              currentPage === 1 ? "translate-y-[0]" : "translate-y-[50px]"
+            } ease-in-out transition-transform duration-700 delay-300`}
           >
             <div
-              className={`${currentPage === 1 ? "opacity-100" : "opacity-0"
-                } transition-opacity duration-500 delay-300`}
+              className={`${
+                currentPage === 1 ? "opacity-100" : "opacity-0"
+              } transition-opacity duration-500 delay-300`}
             >
               <SecondBottomCard />
             </div>
           </div>
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 

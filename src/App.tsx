@@ -96,7 +96,6 @@ function App() {
     (isMedium && [0, 1, 2, 3, 4].includes(currentPage)) ||
     (isLarge && [0, 1, 2].includes(currentPage));
 
-
   return (
     <Router>
       <Routes>
