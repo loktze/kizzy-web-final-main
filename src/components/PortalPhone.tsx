@@ -42,7 +42,7 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({
 
   return (
     <Portal currentPage={currentPage} animationEnd={animationEnd}>
-      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-30">
+      <div className="fixed inset-0 flex items-center justify-center overflow-hidden pointer-events-none z-30">
         <div
           className={`${animationValues} relative pointer-events-none duration-500 transition-transform ease-in-out`}
         >
