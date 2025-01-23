@@ -11,7 +11,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, isMedium }) => {
   const isPage3Large = currentPage === 2 && !isMedium;
 
   return (
-    <div className="absolute top-0 w-full bg-transparent p-4 lg:p-6">
+    <div className="mt-[15px] absolute top-0 w-full bg-transparent p-4 lg:p-6">
       <div className="max-w-[2000px] mx-auto flex justify-between items-center">
         <div>
           <button>
@@ -60,9 +60,9 @@ const Header: React.FC<HeaderProps> = ({ currentPage, isMedium }) => {
                 </p>
               </button>
             </div>
-            <div className="mt-[18px] md:mt-0">
-              <TestnetButton />
-            </div>
+
+            <TestnetButton />
+
 
           </div>
         </div>

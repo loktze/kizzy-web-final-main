@@ -95,7 +95,7 @@ function App() {
           element={
             <>
               {showHeader && (
-                <div className="fixed top-0 left-0 w-full z-[9999]">
+                <div className="fixed top-0 left-0 w-full z-[9999] ">
                   <Header currentPage={currentPage} isMedium={isMedium} />
                 </div>
               )}
@@ -107,7 +107,7 @@ function App() {
                 {pages.map((PageComponent, index) => (
                   <div
                     key={index}
-                    className={`${index === 1 && "relative"} w-full h-full snap-always snap-center`}
+                    className={`${index === 1 ? "relative" : ""} w-full h-full snap-always snap-center`}
                   >
                     {PageComponent}
                   </div>
