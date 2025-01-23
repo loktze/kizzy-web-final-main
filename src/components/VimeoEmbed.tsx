@@ -15,8 +15,8 @@ interface VimeoEmbedProps {
 const VimeoEmbed: React.FC<VimeoEmbedProps> = ({
   isVisible,
   videoId,
-  width = "90%",
-  height = "90%",
+  width,
+  height,
   className,
   style,
   autoplay = true,
@@ -33,7 +33,6 @@ const VimeoEmbed: React.FC<VimeoEmbedProps> = ({
         height,
         overflow: "hidden",
         backgroundColor: "black",
-        borderRadius: "2.5rem",
       }}
     >
       <div
@@ -42,7 +41,6 @@ const VimeoEmbed: React.FC<VimeoEmbedProps> = ({
           width: "100%",
           height: "100%",
           overflow: "hidden",
-          borderRadius: "2.5rem",
         }}
       >
         <iframe
@@ -56,7 +54,7 @@ const VimeoEmbed: React.FC<VimeoEmbedProps> = ({
             width: "100%",
             height: "100%",
             border: "none",
-            borderRadius: "2.5rem",
+
           }}
           title="Embedded Vimeo Video Player"
           aria-label="Embedded Vimeo video player"

@@ -25,9 +25,9 @@ const Header: React.FC<HeaderProps> = ({ currentPage, isMedium }) => {
                   ? "Kizzy Light Logo Mobile"
                   : "Kizzy Dark Logo Mobile"
               }
-              width={69}
+              width={80}
               height={28}
-              className="block lg:hidden"
+              className="block lg:hidden object-contain"
             />
           </button>
           <button>
@@ -52,9 +52,8 @@ const Header: React.FC<HeaderProps> = ({ currentPage, isMedium }) => {
             <div className="hidden md:block">
               <button>
                 <p
-                  className={`careers ${
-                    isPage3 || isPage3Large ? "text-white" : "text-black"
-                  }`}
+                  className={`careers ${isPage3 || isPage3Large ? "text-white" : "text-black"
+                    }`}
                 >
                   Careers
                 </p>

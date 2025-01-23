@@ -192,19 +192,19 @@ html {
 
 /* Dropping down (Page 1) */
 .phone-drop-large {
-    transform: scale(1.3) translateY(190px);
-    /* For large screens */
+    transform: scale(1.3) translateY(92px);
     opacity: 1;
     visibility: visible;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+    transform-origin: top;
 }
 
 .phone-drop-medium {
-    transform: scale(1.55) translateY(190px);
-    /* For medium screens */
+    transform: scale(1.55) translateY(60px);
     opacity: 1;
     visibility: visible;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+    transform-origin: top;
 }
 
 /* Hidden (Page 2 or beyond) */

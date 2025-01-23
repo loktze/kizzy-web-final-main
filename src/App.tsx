@@ -20,11 +20,11 @@ function App() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [currentPage, setCurrentPage] = useState(0);
   const isThrottled = useRef(false);
-  const [animationEnd, setAnimationEnd] = useState(false);
 
   const isLarge = useMediaQuery("(min-width: 1024px)");
   const isMedium = useMediaQuery("(max-width: 1023px)");
 
+  //Mobile has extra pages
   const pages = useMemo(() => {
     if (isLarge) {
       return [
@@ -49,6 +49,8 @@ function App() {
     }
   }, [isLarge, isMedium, currentPage]);
 
+
+  //Calculate the current page number
   const handleScroll = useCallback(() => {
     if (!containerRef.current) return;
 
@@ -79,19 +81,7 @@ function App() {
     }
   }, [handleScroll]);
 
-  useEffect(() => {
-    const body = document.body;
-    if (currentPage === 1) {
-      body.classList.add("no-scroll");
-    } else {
-      body.classList.remove("no-scroll");
-    }
-
-    return () => {
-      body.classList.remove("no-scroll");
-    };
-  }, [currentPage]);
-
+  //Headers check
   const showHeader =
     (isMedium && [0, 1, 2, 3, 4].includes(currentPage)) ||
     (isLarge && [0, 1, 2].includes(currentPage));
@@ -102,42 +92,35 @@ function App() {
         <Route
           path="/"
           element={
-            <>
+            <div
+              ref={containerRef}
+              className="max-h-dvh w-full h-dvh overflow-x-hidden overflow-y-scroll snap-y snap-mandatory hide-scrollbar"
+            >
               {showHeader && (
                 <div className="fixed top-0 left-0 w-full z-[9999]">
                   <Header currentPage={currentPage} isMedium={isMedium} />
                 </div>
               )}
-              <div
-                ref={containerRef}
-                className="h-dvh md:h-screen overflow-x-hidden overflow-y-scroll snap-y snap-mandatory hide-scrollbar"
-              >
-                {pages.map((PageComponent, index) => (
-                  <div key={index} className="w-screen h-dvh md:h-screen snap-always snap-start">
-                    {PageComponent}
-                  </div>
-                ))}
-                <PortalPhone
-                  animationEnd={animationEnd}
-                  currentPage={currentPage}
-                  setAnimationEnd={setAnimationEnd}
-                />
-                {/* Text Content */}
-                <div className="fixed top-24 w-full px-4 flex flex-col items-center gap-4 z-0">
+              {pages.map((PageComponent, index) => (
+                <div key={index} className="w-full h-full snap-always snap-center max-w-[2000px]">
+                  {PageComponent}
+                </div>
+              ))}
+
+              <div className={`z-[9999] pointer-events-none flex flex-col items-center justify-between overflow-hidden fixed top-0  w-full h-full transition-all duration-700 ease-in-out`}>
+
+                <div className={`w-full px-4 flex flex-col items-center gap-4 z-0  ${currentPage === 1
+                  ? "opacity-100 translate-y-0 transition-all ease-in-out visible mt-24"
+                  : "opacity-0 translate-y-[10px] transition-none invisible max-h-0 mt-0"
+                  } transform  duration-[1100ms]`}>
                   <p
-                    className={`${currentPage === 1
-                      ? "opacity-100 translate-y-0 transition-all duration-700 ease-in-out"
-                      : "opacity-0 translate-y-[10px] transition-none"
-                      } transform headline text-3xl text-center`}
+                    className={`headline text-3xl text-center`}
                   >
                     Betting Like Never Before
                   </p>
 
                   <p
-                    className={`${currentPage === 1
-                      ? "opacity-100 translate-y-0 transition-all duration-700 ease-in-out"
-                      : "opacity-0 translate-y-[10px] transition-none"
-                      } transform subtext text-grey text-center`}
+                    className={` subtext text-grey text-center`}
                   >
                     Social media creators have taken over the world.{" "}
                     <br className="md:hidden" />
@@ -147,12 +130,9 @@ function App() {
                   </p>
 
                   <div
-                    className={`${currentPage === 1
-                      ? "opacity-100 translate-y-0 transition-all duration-700 ease-in-out"
-                      : "opacity-0 translate-y-[10px] transition-none"
-                      } transform`}
+
                   >
-                    <div className="inline-flex items-center gap-2 rounded-lg py-3 px-4 lg:rounded-2xl lg:py-3 lg:px-4 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
+                    <div className=" inline-flex items-center gap-2 rounded-lg py-3 px-4 lg:rounded-2xl lg:py-3 lg:px-4 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -173,12 +153,21 @@ function App() {
                     </div>
                   </div>
                 </div>
+
+                <PortalPhone
+                  currentPage={currentPage}
+                />
+
+
               </div>
-            </>
+
+
+            </div>
+
           }
         />
       </Routes>
-    </Router>
+    </Router >
   );
 }
 
