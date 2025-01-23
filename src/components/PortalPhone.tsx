@@ -28,7 +28,7 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({
   return (
     <div className={`h-full  flex justify-center items-center overflow-visible w-full `}>
 
-      <div className={`${currentPage === 1 ? "scale-[1.3] translate-y-[22px]" : "scale-1 -translate-y-[150px]"} relative ${phoneClassName} will-change-transform origin-top md:duration-500 transition-all transform-gpu`}>
+      <div className={`${currentPage === 1 ? "scale-[1.3] translate-y-[22px]" : "scale-1 -translate-y-[150px]"} ease-in-out relative ${phoneClassName} will-change-transform origin-top md:duration-500 transition-all transform-gpu`}>
         {shouldShowPhone && (
           <img
             key="phone"
