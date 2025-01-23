@@ -21,7 +21,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
                 alt="Text Decoration"
                 className="absolute z-0 left-1 w-[154px] -top-[25px] md:w-[194px] md:-top-9 lg:w-[232px] lg:-top-[42px] 2xl:w-[305px] 2xl:-top-[60px]"
               />
-              <p className="relative headline tracking-[-0.66px] z-10 text-white text-3xl">
+              <p className="relative headline font-poppins tracking-[-0.66px] z-10 text-white text-3xl">
                 Start Social Media
                 <br />
                 Betting Now
@@ -66,8 +66,8 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
 
             <div
               className={`pt-24 lg:pt-8 2xl:pt-16 ${currentPage === 2 || currentPage === 4
-                  ? "opacity-100 translate-y-[0]"
-                  : "opacity-0 -translate-y-[20px]"
+                ? "opacity-100 translate-y-[0]"
+                : "opacity-0 -translate-y-[20px]"
                 } transition-all transform transform-gpu duration-700 ease-in-out delay-300 relative`}
             >
               {/* Fog Effect */}
@@ -109,8 +109,8 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
         <div className="hidden lg:flex">
           <div
             className={`absolute left-[10%] top-[17%] lg:top-[15%] 2xl:left-[12%] 2xl:top-[14%] ${currentPage === 2
-                ? "opacity-100 translate-x-[0]"
-                : "opacity-0 translate-x-[10px]"
+              ? "opacity-100 translate-x-[0]"
+              : "opacity-0 translate-x-[10px]"
               } delay-300 ease-in-out transition-all transform transform-gpu duration-700`}
           >
             <div className="relative">
@@ -127,8 +127,8 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
           </div>
           <div
             className={`absolute left-[6%] bottom-[17%] lg:bottom-[22%] 2xl:left-[8%] 2xl:bottom-[18%] ${currentPage === 2
-                ? "opacity-100 translate-x-[0]"
-                : "opacity-0 translate-x-[10px]"
+              ? "opacity-100 translate-x-[0]"
+              : "opacity-0 translate-x-[10px]"
               } delay-300 ease-in-out transition-all transform transform-gpu duration-700`}
           >
             <div className="relative">
@@ -146,8 +146,8 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
 
           <div
             className={`right-[6%] top-[38%] xl:right-[6%] xl:top-[37%] 2xl:right-[6%] ${currentPage === 2
-                ? "opacity-100 translate-x-[0]"
-                : "opacity-0 -translate-x-[10px]"
+              ? "opacity-100 translate-x-[0]"
+              : "opacity-0 -translate-x-[10px]"
               } absolute delay-300 ease-in-out transition-all transform transform-gpu duration-700`}
           >
             <div className="relative">

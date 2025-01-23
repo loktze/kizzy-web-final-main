@@ -120,7 +120,7 @@ function App() {
                     : "opacity-0 translate-y-0"
                     }  transform-gpu transition-all duration-500 ease-in-out pt-24`}
                 >
-                  <p className={`headline text-3xl text-center`}>
+                  <p className={`headline text-3xl text-center font-poppins`}>
                     Betting Like Never Before
                   </p>
 
