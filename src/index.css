@@ -8,11 +8,12 @@ body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
 }
 
-html {
+/* html {
     scroll-behavior: smooth;
-}
+} */
 
 /* Hide scrollbar for all browsers */
 .hide-scrollbar {
