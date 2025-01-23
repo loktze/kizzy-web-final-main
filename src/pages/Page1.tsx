@@ -10,7 +10,9 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
       className={`relative h-full mx-auto flex bg-cover bg-center  max-w-xxlScreen `}
       style={{ backgroundImage: "url('/images/background.png')" }}
     >
+
       {currentPage === 0 &&
+
         <div
           className={`${currentPage !== 0 ? "opacity-0" : "opacity-100"}  ease-in-out duration-100 transition-opacity absolute inset-0 flex justify-center items-center z-5 pt-[100px] md:pt-0 h-full pointer-events-none`}
         >
@@ -31,7 +33,7 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
           <div className="absolute w-full flex justify-center z-0 pt-[500px] md:pt-0 pointer-events-none">
             <div className="w-full whitespace-nowrap overflow-hidden">
               <div
-                className={`inline-block text-white font-poppins font-semibold marquee leading-[1.2] overflow-visible `}
+                className={`z-0 inline-block text-white font-poppins font-semibold marquee leading-[1.2] overflow-visible `}
                 style={{
                   paddingBottom: "20px",
                   WebkitTextStroke: "0.2px transparent",
@@ -44,6 +46,7 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
             </div>
           </div>
         </div>
+
       }
       <footer className="absolute bottom-0 w-full bg-transparent">
         <div className="hidden md:flex justify-end p-12">
@@ -62,7 +65,9 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
           </div>
         </div>
       </footer>
+      <div className="z-[1000] absolute top-0 left-0 bg-transparent bg-cover h-full w-full"></div>
     </div>
+
   );
 };
 
