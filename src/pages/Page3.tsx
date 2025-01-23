@@ -14,7 +14,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
         <div className="flex w-full pt-24 lg:pt-24 2xl:pt-28 h-full text-center">
           <div className="relative w-full flex flex-col items-center">
             <div
-              className={`relative inline-block pointer-events-none ${currentPage === 2 || currentPage === 4 ? "opacity-100 translate-y-[0]" : "opacity-0 translate-y-[10px]"} delay-300 ease-in-out transition-all transform duration-700`}
+              className={`relative inline-block pointer-events-none ${currentPage === 2 || currentPage === 4 ? "opacity-100 translate-y-[0]" : "opacity-0 translate-y-[10px]"} delay-300 ease-in-out transition-all transform transform-gpu duration-700`}
             >
               <img
                 src="/images/text-decoration.png"
@@ -30,7 +30,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
 
             <div className="mt-4 md:mt-2 2xl:mt-8 pointer-events-none">
               <p
-                className={`subtext text-lightgrey ${currentPage === 2 || currentPage === 4 ? "opacity-100 translate-y-[0]" : "opacity-0 translate-y-[10px]"} delay-300 ease-in-out transition-all transform duration-700`}
+                className={`subtext text-lightgrey ${currentPage === 2 || currentPage === 4 ? "opacity-100 translate-y-[0]" : "opacity-0 translate-y-[10px]"} delay-300 ease-in-out transition-all transform transform-gpu duration-700`}
               >
                 Social Media Betting is the future of how{" "}
                 <br className="md:hidden" />
@@ -41,7 +41,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             </div>
 
             <div
-              className={`mt-4 lg:mt-4 2xl:mt-6 ${currentPage === 2 || currentPage === 4 ? "opacity-100 translate-y-[0]" : "opacity-0 translate-y-[10px]"} delay-300 ease-in-out transition-all transform duration-700`}
+              className={`mt-4 lg:mt-4 2xl:mt-6 ${currentPage === 2 || currentPage === 4 ? "opacity-100 translate-y-[0]" : "opacity-0 translate-y-[10px]"} delay-300 ease-in-out transition-all transform transform-gpu duration-700`}
             >
               <div className="inline-flex items-center gap-2 lg:gap-4 rounded-xl py-3 px-4 lg:px-3.5 lg:py-3.5 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
                 <svg
@@ -68,7 +68,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
               className={`pt-24 lg:pt-8 2xl:pt-16 ${currentPage === 2 || currentPage === 4
                 ? "opacity-100 translate-y-[0]"
                 : "opacity-0 -translate-y-[20px]"
-                } transition-all transform duration-700 ease-in-out delay-300 relative`}
+                } transition-all transform transform-gpu duration-700 ease-in-out delay-300 relative`}
             >
               {/* Fog Effect */}
               <div
@@ -84,7 +84,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
               />
 
               {/* Lottie Animations */}
-              <div className="absolute top-[36%] md:top-[44%] lg:top-[8%] xl:top-[6%] 2xl:top-[24%] left-1/2 transform -translate-x-1/2 z-10">
+              <div className="absolute top-[36%] md:top-[44%] lg:top-[8%] xl:top-[6%] 2xl:top-[24%] left-1/2 transform transform-gpu -translate-x-1/2 z-10">
                 <Lottie
                   animationData={wave}
                   loop={true}
@@ -92,7 +92,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
                   aria-label="Wave Animation"
                   className="w-[360px] md:w-[420px] lg:w-[580px] mx-auto"
                 />
-                <div className="absolute bottom-14 md:bottom-20 lg:bottom-24 left-1/2 transform -translate-x-1/2">
+                <div className="absolute bottom-14 md:bottom-20 lg:bottom-24 left-1/2 transform transform-gpu -translate-x-1/2">
                   <Lottie
                     animationData={line}
                     loop={true}
@@ -111,7 +111,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             className={`absolute left-[10%] top-[17%] lg:top-[15%] 2xl:left-[12%] 2xl:top-[14%] ${currentPage === 2
               ? "opacity-100 translate-x-[0]"
               : "opacity-0 translate-x-[10px]"
-              } delay-300 ease-in-out transition-all transform duration-700`}
+              } delay-300 ease-in-out transition-all transform transform-gpu duration-700`}
           >
             <div className="relative">
               <div
@@ -129,7 +129,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             className={`absolute left-[6%] bottom-[17%] lg:bottom-[22%] 2xl:left-[8%] 2xl:bottom-[18%] ${currentPage === 2
               ? "opacity-100 translate-x-[0]"
               : "opacity-0 translate-x-[10px]"
-              } delay-300 ease-in-out transition-all transform duration-700`}
+              } delay-300 ease-in-out transition-all transform transform-gpu duration-700`}
           >
             <div className="relative">
               <div
@@ -148,7 +148,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             className={`right-[6%] top-[38%] xl:right-[6%] xl:top-[37%] 2xl:right-[6%] ${currentPage === 2
               ? "opacity-100 translate-x-[0]"
               : "opacity-0 -translate-x-[10px]"
-              } absolute delay-300 ease-in-out transition-all transform duration-700`}
+              } absolute delay-300 ease-in-out transition-all transform transform-gpu duration-700`}
           >
             <div className="relative">
               <div

@@ -20,7 +20,7 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
         <div className="absolute bottom-2 left-4 xl:left-20 2xl:left-48">
           <div
             className={`${currentPage === 1 ? "translate-y-[0]" : "translate-y-[50px]"
-              } mb-4 ease-in-out transition-transform duration-700 delay-500`}
+              } mb-4 ease-in-out transition-transform transform-gpu duration-700 delay-500`}
           >
             <div
               className={`${currentPage === 1 ? "opacity-100" : "opacity-0"
@@ -31,7 +31,7 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
           </div>
           <div
             className={`${currentPage === 1 ? "translate-y-[0]" : "translate-y-[50px]"
-              } ease-in-out transition-transform duration-700 delay-300`}
+              } ease-in-out transition-transform transform-gpu duration-700 delay-300`}
           >
             <div
               className={`${currentPage === 1 ? "opacity-100" : "opacity-0"
@@ -44,7 +44,7 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
         <div className="absolute bottom-2 right-4 xl:right-20 2xl:right-48">
           <div
             className={`${currentPage === 1 ? "translate-y-[0]" : "translate-y-[50px]"
-              } mb-4 ease-in-out transition-transform duration-700 delay-500`}
+              } mb-4 ease-in-out transition-transform transform-gpu duration-700 delay-500`}
           >
             <div
               className={`${currentPage === 1 ? "opacity-100" : "opacity-0"
@@ -55,7 +55,7 @@ const Page2: React.FC<Page2Props> = ({ currentPage }) => {
           </div>
           <div
             className={`${currentPage === 1 ? "translate-y-[0]" : "translate-y-[50px]"
-              } ease-in-out transition-transform duration-700 delay-300`}
+              } ease-in-out transition-transform transform-gpu duration-700 delay-300`}
           >
             <div
               className={`${currentPage === 1 ? "opacity-100" : "opacity-0"

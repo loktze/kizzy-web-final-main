@@ -112,7 +112,7 @@ function App() {
                 <div className={`w-full px-4 flex flex-col items-center gap-4 z-0  ${currentPage === 1
                   ? "opacity-100 translate-y-0 transition-all ease-in-out visible mt-24"
                   : "opacity-0 translate-y-[10px] transition-none invisible max-h-0 mt-0"
-                  } transform  duration-[1100ms]`}>
+                  } transform transform-gpu duration-[1100ms]`}>
                   <p
                     className={`headline text-3xl text-center`}
                   >
