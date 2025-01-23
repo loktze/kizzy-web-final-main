@@ -11,7 +11,7 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
       style={{ backgroundImage: "url('/images/background.png')" }}
     >
 
-
+{currentPage === 0 &&
       <div
         className={`${currentPage !== 0 ? "opacity-0" : "opacity-100"}  ease-in-out duration-100 transition-opacity absolute inset-0 flex justify-center items-center z-5 pt-[100px] md:pt-0 h-full pointer-events-none`}
       >
@@ -45,7 +45,7 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
           </div>
         </div>
       </div>
-
+}
 
       <footer className="absolute bottom-0 w-full bg-transparent">
         <div className="hidden md:flex justify-end p-12">
