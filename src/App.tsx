@@ -102,7 +102,7 @@ function App() {
                 </div>
               )}
               {pages.map((PageComponent, index) => (
-                <div key={index} className="w-full h-full snap-always snap-center max-w-[2000px]">
+                <div key={index} className="w-full h-full snap-always snap-center max-w-[2000px] pb-1">
                   {PageComponent}
                 </div>
               ))}
