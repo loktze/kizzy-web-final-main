@@ -67,7 +67,7 @@ const FirstBottomCard: React.FC<FirstBottomCardProps> = ({ className }) => {
             className="font-lexend text-md text-[#0E1727] font-semibold"
           />
           <p className="font-lexend text-sm text-[#A3A3A3]">
-            @IShowSpeed . 38.9M+ subscribers
+            @IShowSpeed 38.9M+ subscribers
           </p>
           <p className="font-lexend rounded-3xl bg-black text-xs text-white px-2 py-1 mt-2 w-fit">
             Subscribe
