@@ -107,12 +107,12 @@ function App() {
                 </div>
               ))}
 
-              <div className={`z-[9999] pointer-events-none flex flex-col items-center justify-between overflow-hidden fixed top-0  w-full h-full`}>
+              <div className={`z-[9999] pointer-events-none touch-none flex flex-col items-center justify-between overflow-hidden fixed top-0  w-full h-full`}>
 
                 <div className={`w-full px-4 flex flex-col items-center gap-4 z-0  ${currentPage === 1
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-[10px] invisible mt-0"
-                  }  !transform-gpu transition-all duration-200 linear  pt-24`}>
+                  }  !transform-gpu transition-all duration-200 linear pt-24`}>
                   <p
                     className={`headline text-3xl text-center`}
                   >

@@ -14,7 +14,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
         <div className="flex w-full pt-24 lg:pt-24 2xl:pt-28 h-full text-center">
           <div className="relative w-full flex flex-col items-center">
             <div
-              className={`relative inline-block pointer-events-none ${currentPage === 2 || currentPage === 4 ? "opacity-100 translate-y-[0]" : "opacity-0 translate-y-[10px]"} delay-300 ease-in-out transition-all transform transform-gpu duration-700`}
+              className={`relative inline-block pointer-events-none touch-none ${currentPage === 2 || currentPage === 4 ? "opacity-100 translate-y-[0]" : "opacity-0 translate-y-[10px]"} delay-300 ease-in-out transition-all transform transform-gpu duration-700`}
             >
               <img
                 src="/images/text-decoration.png"
@@ -28,7 +28,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
               </p>
             </div>
 
-            <div className="mt-4 md:mt-2 2xl:mt-8 pointer-events-none">
+            <div className="mt-4 md:mt-2 2xl:mt-8 pointer-events-none touch-none">
               <p
                 className={`subtext text-lightgrey ${currentPage === 2 || currentPage === 4 ? "opacity-100 translate-y-[0]" : "opacity-0 translate-y-[10px]"} delay-300 ease-in-out transition-all transform transform-gpu duration-700`}
               >
