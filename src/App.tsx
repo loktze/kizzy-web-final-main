@@ -102,7 +102,7 @@ function App() {
 
               <div
                 ref={containerRef}
-                className="max-h-dvh w-full h-dvh overflow-x-hidden overflow-y-scroll snap-y snap-mandatory hide-scrollbar"
+                className="max-h-dvh w-full h-dvh overflow-x-hidden overflow-y-scroll snap-y snap-mandatory hide-scrollbar touch-manipulation"
               >
 
                 {pages.map((PageComponent, index) => (
