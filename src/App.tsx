@@ -91,7 +91,7 @@ function App() {
         <Route
           path="/"
           element={
-            <div>
+            <>
               {showHeader && (
                 <div className="fixed top-0 left-0 w-full z-[9999]">
                   <Header currentPage={currentPage} isMedium={isMedium} />
@@ -100,26 +100,25 @@ function App() {
 
               <div
                 ref={containerRef}
-                className="max-h-dvh w-full z-[20] h-dvh overflow-x-hidden overflow-y-scroll snap-y snap-mandatory hide-scrollbar"
+                className="max-h-dvh h-dvh w-full z-[20]  overflow-x-hidden overflow-y-scroll snap-y snap-mandatory hide-scrollbar"
               >
                 {pages.map((PageComponent, index) => (
                   <div
                     key={index}
-                    className="w-full h-full snap-always snap-center max-w-[2000px]"
+                    className={`${index === 1 && "relative"} w-full h-full snap-always snap-center max-w-[2000px]`}
                   >
                     {PageComponent}
                   </div>
                 ))}
               </div>
               <div
-                className={`z-[10] pointer-events-none flex flex-col items-center justify-between overflow-hidden fixed top-0  w-full h-full`}
+                className={`z-[80] pointer-events-none flex flex-col items-center justify-between overflow-hidden fixed top-0  w-full h-full`}
               >
                 <div
-                  className={`w-full px-4 flex flex-col items-center gap-4 z-0  ${
-                    currentPage === 1
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-[10px] mt-0"
-                  }  !transform-gpu transition-all duration-500 md:duration-300 ease-in-out pt-24`}
+                  className={`w-full px-4 flex flex-col items-center gap-4 z-0  ${currentPage === 1
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-[10px] mt-0"
+                    }  !transform-gpu transition-all duration-500 md:duration-300 ease-in-out pt-24`}
                 >
                   <p className={`headline text-3xl text-center`}>
                     Betting Like Never Before
@@ -160,7 +159,7 @@ function App() {
 
                 <PortalPhone currentPage={currentPage} />
               </div>
-            </div>
+            </>
           }
         />
       </Routes>
