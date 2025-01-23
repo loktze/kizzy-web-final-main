@@ -92,7 +92,7 @@ function App() {
         <Route
           path="/"
           element={
-            <div>
+            <div className="max-h-dvh w-full h-dvh">
               {showHeader && (
                 <div className="fixed top-0 left-0 w-full z-[9999]">
                   <Header currentPage={currentPage} isMedium={isMedium} />
@@ -102,7 +102,7 @@ function App() {
 
               <div
                 ref={containerRef}
-                className="max-h-dvh w-full h-dvh overflow-x-hidden overflow-y-scroll snap-y snap-mandatory hide-scrollbar touch-manipulation"
+                className="w-full h-full overflow-x-hidden overflow-y-scroll snap-y snap-mandatory hide-scrollbar touch-manipulation"
               >
 
                 {pages.map((PageComponent, index) => (
