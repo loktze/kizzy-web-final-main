@@ -9,8 +9,14 @@ module.exports = {
         lightpurple: "#BEABFF",
         grey: "#666666",
         lightgrey: "#B2B2B2",
+        buttonpurple: "#d2c3f5",
+        darkpurple: "#8562FE"
+
       },
-    },
+      maxWidth: {
+        xxlScreen: '2000px'
+      },
+    }
   },
   plugins: [require("tailwind-scrollbar-hide")]
 };

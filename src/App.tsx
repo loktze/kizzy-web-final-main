@@ -105,7 +105,7 @@ function App() {
                 {pages.map((PageComponent, index) => (
                   <div
                     key={index}
-                    className={`${index === 1 && "relative"} w-full h-full snap-always snap-center max-w-[2000px]`}
+                    className={`${index === 1 && "relative"} w-full h-full snap-always snap-center`}
                   >
                     {PageComponent}
                   </div>
@@ -118,7 +118,7 @@ function App() {
                   className={`w-full px-4 flex flex-col items-center gap-4 z-0  ${currentPage === 1
                     ? "opacity-100 translate-y-[10px]"
                     : "opacity-0 translate-y-0"
-                    }  transform-gpu transition-all duration-300 ease-in-out pt-24`}
+                    }  transform-gpu transition-all duration-500 ease-in-out pt-24`}
                 >
                   <p className={`headline text-3xl text-center`}>
                     Betting Like Never Before

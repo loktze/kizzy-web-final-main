@@ -11,7 +11,7 @@ interface Page2Props {
 const Page2: React.FC<Page2Props> = ({ currentPage }) => {
   return (
     <div
-      className="relative h-full items-center flex flex-col bg-cover bg-center overflow-hidden"
+      className="relative h-full items-center flex flex-col bg-cover bg-center overflow-hidden max-w-xxlScreen mx-auto"
       style={{ backgroundImage: "url('/images/background.png')" }}
     >
 
