@@ -137,7 +137,7 @@ function App() {
                   </p>
 
                   <div
-
+                    className="z-[9999]"
                   >
                     <div className=" inline-flex items-center gap-2 rounded-lg py-3 px-4 lg:rounded-2xl lg:py-3 lg:px-4 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
                       <svg
