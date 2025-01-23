@@ -7,10 +7,10 @@ interface Page1Props {
 const Page1: React.FC<Page1Props> = ({ currentPage }) => {
   return (
     <div
-      className={`relative h-full mx-auto flex bg-cover bg-center`}
+      className={`relative h-full mx-auto flex bg-cover bg-center `}
       style={{ backgroundImage: "url('/images/background.png')" }}
     >
-      <div className={`absolute inset-0 flex justify-center items-center z-5 pt-[100px] md:pt-0 h-full pointer-events-none touch-none`}>
+      <div className={`${currentPage !== 0 ? "opacity-0" : "opacity-100"}  ease-in-out duration-100 transition-opacity absolute inset-0 flex justify-center items-center z-5 pt-[100px] md:pt-0 h-full pointer-events-none touch-none`}>
         <div
           className={` absolute w-[80%] h-[700px] blur-[80px] rounded-full`}
           style={{
