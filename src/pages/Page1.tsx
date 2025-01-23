@@ -10,7 +10,7 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
       className="relative h-full mx-auto flex bg-cover bg-center"
       style={{ backgroundImage: "url('/images/background.png')" }}
     >
-      <div className="absolute inset-0 flex justify-center items-center z-5 pt-[100px] md:pt-0 h-full">
+      <div className="absolute inset-0 flex justify-center items-center z-5 pt-[100px] md:pt-0 h-full pointer-events-none">
         <div
           className="absolute w-[80%] h-[700px] blur-[80px] rounded-full"
           style={{
