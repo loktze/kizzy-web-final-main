@@ -28,7 +28,7 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({
   return (
     <div className={`h-full  flex justify-center items-center overflow-visible w-full `}>
 
-      <div className={`${currentPage === 1 ? "scale-[1.3] translate-y-[22px]" : "scale-1 -translate-y-[150px]"} duration-300 ease-in-out relative ${phoneClassName} will-change-transform origin-top md:duration-500 transition-all transform-gpu`}>
+      <div className={`${currentPage === 1 ? "scale-[1.3] translate-y-[22px]" : "scale-1 -translate-y-[150px]"} duration-700  md:duration-300 ease-in-out relative ${phoneClassName} will-change-transform origin-top md:duration-500 transition-all transform-gpu`}>
         {shouldShowPhone && (
           <img
             key="phone"
@@ -40,7 +40,7 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({
         )}
         <div className={`absolute bottom-0 left-0 object-fill h-full w-full p-[8px] `}>
 
-          {/* <VimeoEmbed
+          <VimeoEmbed
             key={`vimeo-${videoId}`}
             isVisible={currentPage === 0}
             videoId={videoId}
@@ -51,7 +51,7 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({
             autoplay
             loop
             muted
-          /> */}
+          />
         </div>
       </div>
 
