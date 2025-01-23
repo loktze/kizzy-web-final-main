@@ -30,7 +30,7 @@ const FirstTopCard: React.FC<FirstTopCardProps> = ({ className }) => {
       </div>
       <div className="relative mt-16">
         <motion.img
-          src="/images/purple-percentage-bar.png"
+          src="/images/purple_percentagebar.png"
           alt="Purple Percentage"
           width={184}
           height={47}
@@ -45,7 +45,7 @@ const FirstTopCard: React.FC<FirstTopCardProps> = ({ className }) => {
           }}
         />
         <img
-          src="/images/blue-percentage-bar.png"
+          src="/images/blue_percentagebar.png"
           alt="Blue Percentage"
           width={148}
           height={42}

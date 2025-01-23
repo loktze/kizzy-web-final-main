@@ -49,7 +49,6 @@ function App() {
     }
   }, [isLarge, isMedium, currentPage]);
 
-
   //Calculate the current page number
   const handleScroll = useCallback(() => {
     if (!containerRef.current) return;
@@ -99,36 +98,34 @@ function App() {
                 </div>
               )}
 
-
               <div
                 ref={containerRef}
                 className="max-h-dvh w-full z-[20] h-dvh overflow-x-hidden overflow-y-scroll snap-y snap-mandatory hide-scrollbar"
               >
-
                 {pages.map((PageComponent, index) => (
-                  <div key={index} className="w-full h-full snap-always snap-center max-w-[2000px]">
+                  <div
+                    key={index}
+                    className="w-full h-full snap-always snap-center max-w-[2000px]"
+                  >
                     {PageComponent}
                   </div>
                 ))}
-
-
-
               </div>
-              <div className={`z-[10] pointer-events-none !touch-none flex flex-col items-center justify-between overflow-hidden fixed top-0  w-full h-full`}>
-
-                <div className={`w-full px-4 flex flex-col items-center gap-4 z-0  ${currentPage === 1
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-[10px] mt-0"
-                  }  !transform-gpu transition-all duration-500 md:duration-300 ease-in-out pt-24`}>
-                  <p
-                    className={`headline text-3xl text-center`}
-                  >
+              <div
+                className={`z-[10] pointer-events-none flex flex-col items-center justify-between overflow-hidden fixed top-0  w-full h-full`}
+              >
+                <div
+                  className={`w-full px-4 flex flex-col items-center gap-4 z-0  ${
+                    currentPage === 1
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-[10px] mt-0"
+                  }  !transform-gpu transition-all duration-500 md:duration-300 ease-in-out pt-24`}
+                >
+                  <p className={`headline text-3xl text-center`}>
                     Betting Like Never Before
                   </p>
 
-                  <p
-                    className={` subtext text-grey text-center`}
-                  >
+                  <p className={` subtext text-grey text-center`}>
                     Social media creators have taken over the world.{" "}
                     <br className="md:hidden" />
                     Why not bet on them?
@@ -136,9 +133,7 @@ function App() {
                     Kizzy is the world’s first social media betting app.
                   </p>
 
-                  <div
-                    className="z-[9999]"
-                  >
+                  <div className="z-[9999]">
                     <div className=" inline-flex items-center gap-2 rounded-lg py-3 px-4 lg:rounded-2xl lg:py-3 lg:px-4 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -155,23 +150,21 @@ function App() {
                         />
                       </svg>
                       <button>
-                        <div className="download 2xl:text-base">Download now</div>
+                        <div className="download 2xl:text-base">
+                          Download now
+                        </div>
                       </button>
                     </div>
                   </div>
                 </div>
 
-                <PortalPhone
-                  currentPage={currentPage}
-                />
-
-
+                <PortalPhone currentPage={currentPage} />
               </div>
             </div>
           }
         />
       </Routes>
-    </Router >
+    </Router>
   );
 }
 
