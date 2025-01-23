@@ -118,7 +118,7 @@ function App() {
                   className={`w-full px-4 flex flex-col items-center gap-4 z-0  ${currentPage === 1
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-[10px] mt-0"
-                    }  !transform-gpu transition-all duration-500 md:duration-300 ease-in-out pt-24`}
+                    }  !transform-gpu transition-all duration-300 ease-in-out pt-24`}
                 >
                   <p className={`headline text-3xl text-center`}>
                     Betting Like Never Before
