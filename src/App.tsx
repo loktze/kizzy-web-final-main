@@ -92,7 +92,7 @@ function App() {
         <Route
           path="/"
           element={
-            <div className="max-h-dvh w-full h-dvh">
+            <div>
               {showHeader && (
                 <div className="fixed top-0 left-0 w-full z-[9999]">
                   <Header currentPage={currentPage} isMedium={isMedium} />
@@ -102,69 +102,70 @@ function App() {
 
               <div
                 ref={containerRef}
-                className="w-full h-full overflow-x-hidden overflow-y-scroll snap-y snap-mandatory hide-scrollbar touch-manipulation"
+                className="max-h-dvh w-full h-dvh overflow-x-hidden overflow-y-scroll snap-y snap-mandatory hide-scrollbar"
               >
 
                 {pages.map((PageComponent, index) => (
-                  <div key={index} className="w-full h-full snap-always snap-center max-w-[2000px] pb-1">
+                  <div key={index} className="w-full h-full snap-always snap-center max-w-[2000px]">
                     {PageComponent}
                   </div>
                 ))}
 
 
-                <div className={` flex flex-col items-center justify-between overflow-hidden fixed top-0  w-full h-full`}>
 
-                  <div className={`w-full px-4 flex flex-col  items-center gap-4 z-0  ${currentPage === 1
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-[10px] mt-0"
-                    }  !transform-gpu transition-all duration-500 md:duration-300 ease-in-out pt-24`}>
-                    <p
-                      className={`headline text-3xl text-center pointer-events-none !touch-none`}
-                    >
-                      Betting Like Never Before
-                    </p>
+              </div>
+              <div className={` pointer-events-none !touch-none flex flex-col items-center justify-between overflow-hidden fixed top-0  w-full h-full`}>
 
-                    <p
-                      className={` subtext text-grey text-center pointer-events-none !touch-none`}
-                    >
-                      Social media creators have taken over the world.{" "}
-                      <br className="md:hidden" />
-                      Why not bet on them?
-                      <br />
-                      Kizzy is the world’s first social media betting app.
-                    </p>
+                <div className={`w-full px-4 flex flex-col items-center gap-4 z-0  ${currentPage === 1
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-[10px] mt-0"
+                  }  !transform-gpu transition-all duration-500 md:duration-300 ease-in-out pt-24`}>
+                  <p
+                    className={`headline text-3xl text-center`}
+                  >
+                    Betting Like Never Before
+                  </p>
 
-                    <div
+                  <p
+                    className={` subtext text-grey text-center`}
+                  >
+                    Social media creators have taken over the world.{" "}
+                    <br className="md:hidden" />
+                    Why not bet on them?
+                    <br />
+                    Kizzy is the world’s first social media betting app.
+                  </p>
 
-                    >
-                      <div className=" inline-flex items-center gap-2 rounded-lg py-3 px-4 lg:rounded-2xl lg:py-3 lg:px-4 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth={2.5}
-                          stroke="white"
-                          className="w-[17px]"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
-                          />
-                        </svg>
-                        <button>
-                          <div className="download 2xl:text-base">Download now</div>
-                        </button>
-                      </div>
+                  <div
+
+                  >
+                    <div className=" inline-flex items-center gap-2 rounded-lg py-3 px-4 lg:rounded-2xl lg:py-3 lg:px-4 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2.5}
+                        stroke="white"
+                        className="w-[17px]"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+                        />
+                      </svg>
+                      <button>
+                        <div className="download 2xl:text-base">Download now</div>
+                      </button>
                     </div>
                   </div>
-
-                  <PortalPhone
-                    currentPage={currentPage}
-                  />
-
-
                 </div>
+
+                <PortalPhone
+                  currentPage={currentPage}
+                />
+
+
               </div>
             </div>
           }
