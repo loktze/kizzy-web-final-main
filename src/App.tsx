@@ -110,9 +110,9 @@ function App() {
               <div className={`z-[9999] pointer-events-none flex flex-col items-center justify-between overflow-hidden fixed top-0  w-full h-full transition-all duration-700 ease-in-out`}>
 
                 <div className={`w-full px-4 flex flex-col items-center gap-4 z-0  ${currentPage === 1
-                  ? "opacity-100 translate-y-0 transition-all ease-in-out visible mt-24"
-                  : "opacity-0 translate-y-[10px] transition-none invisible max-h-0 mt-0"
-                  } transform transform-gpu duration-[1100ms]`}>
+                  ? "opacity-100 translate-y-0 visible mt-24"
+                  : "opacity-0 translate-y-[10px] invisible max-h-0 mt-0"
+                  }  !transform-gpu transition-all ease-in-out`}>
                   <p
                     className={`headline text-3xl text-center`}
                   >
