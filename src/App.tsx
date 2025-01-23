@@ -110,10 +110,10 @@ function App() {
               )}
               <div
                 ref={containerRef}
-                className="h-dvh md:h-screen overflow-x-hidden overflow-y-scroll snap-always snap-y snap-mandatory hide-scrollbar"
+                className="h-dvh md:h-screen overflow-x-hidden overflow-y-scroll snap-y snap-mandatory hide-scrollbar"
               >
                 {pages.map((PageComponent, index) => (
-                  <div key={index} className="w-screen h-dvh md:h-screen snap-start">
+                  <div key={index} className="w-screen h-dvh md:h-screen snap-always snap-start">
                     {PageComponent}
                   </div>
                 ))}
