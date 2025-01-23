@@ -40,7 +40,7 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({
         )}
         <div className={`absolute bottom-0 left-0 object-fill h-full w-full p-[8px] `}>
 
-          <VimeoEmbed
+          {/* <VimeoEmbed
             key={`vimeo-${videoId}`}
             isVisible={currentPage === 0}
             videoId={videoId}
@@ -51,7 +51,7 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({
             autoplay
             loop
             muted
-          />
+          /> */}
         </div>
       </div>
 
