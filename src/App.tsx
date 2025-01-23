@@ -116,9 +116,9 @@ function App() {
               >
                 <div
                   className={`w-full px-4 flex flex-col items-center gap-4 z-0  ${currentPage === 1
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-[10px] mt-0"
-                    }  !transform-gpu transition-all duration-300 ease-in-out pt-24`}
+                    ? "opacity-100 translate-y-[10px]"
+                    : "opacity-0 translate-y-0"
+                    }  transform-gpu transition-all duration-300 ease-in-out pt-24`}
                 >
                   <p className={`headline text-3xl text-center`}>
                     Betting Like Never Before
@@ -158,6 +158,9 @@ function App() {
                 </div>
 
                 <PortalPhone currentPage={currentPage} />
+                {currentPage === 1 && (
+                  <div className="absolute bottom-0 left-0 inset-0 pointer-events-none bg-gradient-to-t from-white via-white/10 via-30% to-transparent z-[9999]"></div>
+                )}
               </div>
             </>
           }
