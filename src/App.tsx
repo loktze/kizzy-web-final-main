@@ -102,7 +102,7 @@ function App() {
 
               <div
                 ref={containerRef}
-                className="max-h-dvh w-full h-dvh overflow-x-hidden overflow-y-scroll snap-y snap-mandatory hide-scrollbar"
+                className="max-h-dvh w-full z-[20] h-dvh overflow-x-hidden overflow-y-scroll snap-y snap-mandatory hide-scrollbar"
               >
 
                 {pages.map((PageComponent, index) => (
@@ -114,7 +114,7 @@ function App() {
 
 
               </div>
-              <div className={` pointer-events-none !touch-none flex flex-col items-center justify-between overflow-hidden fixed top-0  w-full h-full`}>
+              <div className={`z-[10] pointer-events-none !touch-none flex flex-col items-center justify-between overflow-hidden fixed top-0  w-full h-full`}>
 
                 <div className={`w-full px-4 flex flex-col items-center gap-4 z-0  ${currentPage === 1
                   ? "opacity-100 translate-y-0"
