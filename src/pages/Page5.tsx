@@ -27,18 +27,6 @@ const Page5: React.FC<Page5Props> = ({ currentPage }) => {
           <SecondBottomCard />
         </div>
       </div>
-      {/* <footer className="absolute bottom-0 w-full bg-transparent">
-        <div className="bg-white flex justify-center md:hidden">
-          <div className="flex gap-4 pb-6">
-            <button>
-              <p className="p1footer">Privacy Policy</p>
-            </button>
-            <button>
-              <p className="p1footer">Careers</p>
-            </button>
-          </div>
-        </div>
-      </footer> */}
     </div>
   );
 };

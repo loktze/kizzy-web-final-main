@@ -10,7 +10,6 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
       className={`relative h-full mx-auto flex bg-cover bg-center  max-w-xxlScreen`}
       style={{ backgroundImage: "url('/images/background.png')" }}
     >
-
       {currentPage === 0 &&
         <>
           <div

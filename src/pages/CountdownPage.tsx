@@ -1,4 +1,3 @@
-// src/pages/CountdownPage.tsx
 import React, { useState, useEffect, useMemo, useCallback } from "react";
 import CountdownUnit from "../components/CountdownUnit/CountdownUnit";
 import Confetti from "react-confetti";
@@ -23,7 +22,6 @@ const CountdownPage: React.FC = () => {
     return now;
   }, []);
 
-  // Memoize calculateTimeLeft to prevent ESLint warnings
   const calculateTimeLeft = useCallback((): TimeLeft => {
     const difference = targetDate.getTime() - new Date().getTime();
     let timeLeft: TimeLeft = { hours: 0, minutes: 0, seconds: 0 };

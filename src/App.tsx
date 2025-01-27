@@ -11,11 +11,11 @@ import Page2 from "./pages/Page2";
 import Page3 from "./pages/Page3";
 import Page4 from "./pages/Page4";
 import Page5 from "./pages/Page5";
-import CountdownPage from "./pages/CountdownPage"; // Import the CountdownPage
+import CountdownPage from "./pages/CountdownPage";
 import PortalPhone from "./components/PortalPhone";
 import useMediaQuery from "./hooks/useMediaQuery";
 import Header from "./components/layout/Header";
-// import PrivacyPolicy from "./pages/PrivacyPolicy";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -25,7 +25,6 @@ function App() {
   const isLarge = useMediaQuery("(min-width: 1024px)");
   const isMedium = useMediaQuery("(max-width: 1023px)");
 
-  //Mobile has extra pages
   const pages = useMemo(() => {
     if (isLarge) {
       return [
@@ -50,7 +49,6 @@ function App() {
     }
   }, [isLarge, isMedium, currentPage]);
 
-  //Calculate the current page number
   const handleScroll = useCallback(() => {
     if (!containerRef.current) return;
 
@@ -83,7 +81,6 @@ function App() {
     }
   }, [handleScroll]);
 
-  //Headers check
   const showHeader =
     (isMedium && [0, 1, 2, 3, 4].includes(currentPage)) ||
     (isLarge && [0, 1, 2].includes(currentPage));
@@ -91,7 +88,6 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Existing Route for Home Page */}
         <Route
           path="/"
           element={
@@ -116,12 +112,12 @@ function App() {
                 ))}
               </div>
               <div
-                className={`z-[80] pointer-events-none flex flex-col items-center justify-between overflow-hidden fixed top-0  w-full h-full`}
+                className={`z-[80] pointer-events-none flex flex-col items-center justify-between overflow-hidden fixed top-0 w-full h-full`}
               >
                 <div
                   className={`w-full px-4 flex flex-col items-center gap-4 z-0  ${currentPage === 1
-                      ? "opacity-100 translate-y-[10px]"
-                      : "opacity-0 translate-y-0"
+                    ? "opacity-100 translate-y-[10px]"
+                    : "opacity-0 translate-y-0"
                     }  transform-gpu transition-all duration-500 ease-in-out pt-24`}
                 >
                   {currentPage === 1 && (
@@ -139,26 +135,31 @@ function App() {
                       </p>
 
                       <div className="z-[9999]">
-                        <div className=" inline-flex items-center gap-2 rounded-lg py-3 px-4 lg:rounded-2xl lg:py-3 lg:px-4 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth={2.5}
-                            stroke="white"
-                            className="w-[17px]"
+                        <div className="relative z-0">
+                          <button
+                            className="bg-buttonpurple z-[10]
+                         flex justify-between items-center gap-2 lg:gap-4 rounded-xl py-3 px-4 lg:px-6 lg:py-4 xl:rounded-2xl "
                           >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
-                            />
-                          </svg>
-                          <button>
-                            <div className="download 2xl:text-base">
-                              Download now
-                            </div>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              strokeWidth={2.5}
+                              stroke="white"
+                              className="w-[17px] lg:w-[22px]"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+                              />
+                            </svg>
+                            <div className="download">Testnet Download</div>
+
                           </button>
+                          <div className="absolute z-[1] bg-darkpurple top-8 lg:top-10 left-1/2 transform -translate-x-1/2 rounded-full text-white inline-flex items-center justify-center px-1 py-1">
+                            <p className="text-[10px] font-500 font-poppins">Coming Soon</p>
+                          </div>
                         </div>
                       </div>
                     </>
@@ -174,12 +175,14 @@ function App() {
           }
         />
 
-        {/* New Route for CountdownPage */}
         <Route
           path="/countdownpage"
           element={<CountdownPage />}
         />
 
+        <Route path="/privacypolicy"
+          element={<PrivacyPolicy />}
+        />
 
       </Routes>
     </Router>

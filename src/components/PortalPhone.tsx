@@ -22,7 +22,6 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({
     ? "w-[227px] lg:w-[302px] object-contain"
     : "";
 
-
   const videoId = "1033441094";
 
   return (
@@ -54,10 +53,7 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({
           />
         </div>
       </div>
-
     </div>
-
-
   );
 };
 

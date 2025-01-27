@@ -14,17 +14,13 @@ html {
     overflow: hidden
 }
 
-/* Hide scrollbar for all browsers */
 .hide-scrollbar {
     -ms-overflow-style: none;
-    /* Internet Explorer 10+ */
     scrollbar-width: none;
-    /* Firefox */
 }
 
 .hide-scrollbar::-webkit-scrollbar {
     display: none;
-    /* Safari and Chrome */
 }
 
 .headline {
@@ -146,8 +142,6 @@ html {
     }
 }
 
-
-/* Centered position (Page 0) */
 .phone-center {
     transform: scale(1) translateY(0);
     opacity: 1;
@@ -155,14 +149,11 @@ html {
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-/* Disable scrolling */
 .no-scroll {
     overflow: hidden;
     height: 100%;
 }
 
-
-/* Dropping down (Page 1) */
 .phone-drop-large {
     transform: scale(1.3) translateY(92px);
     opacity: 1;
@@ -179,10 +170,8 @@ html {
     transform-origin: top;
 }
 
-/* Hidden (Page 2 or beyond) */
 .phone-hidden {
     transform: scale(1) translateY(500px);
-    /* Move out of view */
     opacity: 0;
     visibility: hidden;
     transition: transform 0s ease-in-out, opacity 0s ease-in-out, visibility 0.3s ease-in-out;

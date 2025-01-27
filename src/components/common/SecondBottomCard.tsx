@@ -73,7 +73,7 @@ const SecondBottomCard: React.FC<SecondBottomCardProps> = ({ className }) => {
       </div>
       <div className="flex pt-2">
         <video
-          src="/videos/twitter_video.webm" // Path to your WebM video
+          src="/videos/twitter_video.webm"
           autoPlay
           muted
           loop

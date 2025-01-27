@@ -1,4 +1,3 @@
-// src/components/CountdownUnit/CountdownUnit.tsx
 import React from "react";
 import "./CountdownUnit.css";
 

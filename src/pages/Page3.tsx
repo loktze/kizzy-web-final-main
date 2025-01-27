@@ -9,7 +9,7 @@ interface Page3Props {
 
 const Page3: React.FC<Page3Props> = ({ currentPage }) => {
   return (
-    <div className="relative h-full bg-[#110c2f] bg-cover bg-center z-[9999]">
+    <div className="relative h-full bg-[#110c2f] bg-cover bg-center z-[1000]">
       <div className="max-w-xxlScreen mx-auto px-4 relative h-full z-40">
         <div className="flex w-full pt-24 lg:pt-24 2xl:pt-28 h-full text-center">
           <div className="relative w-full flex flex-col items-center">
@@ -43,24 +43,31 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             <div
               className={`mt-4 lg:mt-4 2xl:mt-6 ${currentPage === 2 || currentPage === 4 ? "opacity-100 translate-y-[0]" : "opacity-0 translate-y-[10px]"} delay-300 ease-in-out transition-all transform-gpu duration-700`}
             >
-              <div className="inline-flex items-center gap-2 lg:gap-4 rounded-xl py-3 px-4 lg:px-3.5 lg:py-3.5 bg-gradient-to-r from-[#7040DB] via-[#906BE6] to-[#6E40DB]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2.5}
-                  stroke="white"
-                  className="w-[17px] lg:[22px]"
+              <div className="relative z-0">
+                <button
+                  className="bg-buttonpurple z-[10]
+               flex justify-between items-center gap-2 lg:gap-4 rounded-xl py-3 px-4 lg:px-6 lg:py-4 xl:rounded-2xl "
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
-                  />
-                </svg>
-                <button>
-                  <div className="download">Download now</div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2.5}
+                    stroke="white"
+                    className="w-[17px] lg:w-[22px]"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+                    />
+                  </svg>
+                  <div className="download">Testnet Download</div>
+
                 </button>
+                <div className="absolute z-[1] bg-darkpurple top-8 lg:top-10 left-1/2 transform -translate-x-1/2 rounded-full text-white inline-flex items-center justify-center px-1 py-1">
+                  <p className="text-[10px] font-500 font-poppins">Coming Soon</p>
+                </div>
               </div>
             </div>
 
@@ -70,20 +77,15 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
                 : "opacity-0 -translate-y-[20px]"
                 } transition-all  transform-gpu duration-700 ease-in-out delay-300 relative`}
             >
-              {/* Fog Effect */}
               <div
                 className="absolute top-[70%] inset-0 bg-[#7040DB4F] blur-[80px] rounded-full z-[-10]"
                 aria-hidden="true"
               ></div>
-
-              {/* Phone Image */}
               <img
                 src="/images/phone2.png"
                 alt="Phone 2"
                 className="w-full max-w-xs md:max-w-md 2xl:max-w-lg h-auto object-contain z-20 relative"
               />
-
-              {/* Lottie Animations */}
               <div className="absolute top-[36%] md:top-[44%] lg:top-[8%] xl:top-[6%] 2xl:top-[24%] left-1/2 transform-gpu -translate-x-1/2 z-10">
                 <Lottie
                   animationData={wave}
@@ -163,16 +165,26 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             </div>
           </div>
         </div>
-
         <footer className="absolute bottom-0 w-full bg-transparent">
           <div className="flex justify-center lg:hidden">
-            <div className="flex gap-4 pb-8 2xl:gap-6">
+            <div className="flex gap-4 pb-8 2xl:gap-6 items-center">
               <p className="p3footer">&copy; Kizzy Labs</p>
+              <a
+                href="https://x.com/kizzymobile"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/images/x-logo-light.png"
+                  alt="X Logo"
+                  className="w-3 h-3 object-contain"
+                />
+              </a>
               <p className="p3footer">Privacy Policy</p>
             </div>
           </div>
           <div className="hidden lg:flex justify-center">
-            <div className="flex gap-4 pb-8 2xl:pb-6">
+            <div className="flex gap-4 pb-8 2xl:pb-6 items-center">
               <button>
                 <p className="p3footer">&copy; Kizzy Labs</p>
               </button>

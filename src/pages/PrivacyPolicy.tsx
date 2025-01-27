@@ -5,13 +5,13 @@ const PrivacyPolicy: React.FC = () => {
   const navigate = useNavigate();
 
   const handleBack = () => {
-    navigate(-1); // Navigate to the previous page
+    navigate(-1);
   };
   return (
     <div
       className="relative h-screen flex flex-col bg-cover bg-center"
       style={{ backgroundImage: "url('/images/background.png')" }}
-      onTouchStart={(e) => e.stopPropagation()} // Prevent interference with App.tsx
+      onTouchStart={(e) => e.stopPropagation()}
     >
       <div className="flex flex-col gap-4 xl:gap-6 justify-center pt-20 xl:pt-32">
         <p className="headline text-2xl text-center">
