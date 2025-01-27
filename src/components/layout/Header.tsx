@@ -67,14 +67,20 @@ const Header: React.FC<HeaderProps> = ({ currentPage, isMedium }) => {
                   className="w-4 h-4 object-contain"
                 />
               </a>
-              <button>
-                <p
-                  className={`careers ${isPage3 || isPage3Large ? "text-white" : "text-black"
-                    }`}
-                >
-                  Careers
-                </p>
-              </button>
+              <a
+                href="https://jobs.polymer.co/kizzy-labs-corp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button>
+                  <p
+                    className={`careers ${isPage3 || isPage3Large ? "text-white" : "text-black"
+                      }`}
+                  >
+                    Careers
+                  </p>
+                </button>
+              </a>
             </div>
             <TestnetButton />
           </div>
