@@ -1,5 +1,3 @@
-/* src/components/CountdownUnit/CountdownUnit.css */
-
 .countdown-unit-container {
     display: flex;
     flex-direction: column;
@@ -7,26 +5,41 @@
 }
 
 .countdown-unit {
-    background-color: rgba(51, 51, 51, 0.8);
-    /* Semi-transparent background */
-    color: #fff;
-    width: 80px;
-    height: 80px;
-    /* Square shape */
-    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(180deg, #fff 53.79%, #f8f6ff 100%);
+    color: #7346dd;
+    width: 170px;
+    height: 210px;
+    border-radius: 12px;
+    border: 1px solid rgba(115, 70, 221, 0.17);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .countdown-value {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 100px;
+    font-weight: 600;
 }
 
-/* Optional: Add hover effects or transitions */
-.countdown-unit:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+@media (max-width: 1024px) {
+    .countdown-unit {
+        width: 107px;
+        height: 144px;
+    }
+
+    .countdown-value {
+        font-size: 64px;
+    }
+}
+
+@media (max-width: 768px) {
+    .countdown-unit {
+        width: 77px;
+        height: 114px;
+    }
+
+    .countdown-value {
+        font-size: 48px;
+    }
 }

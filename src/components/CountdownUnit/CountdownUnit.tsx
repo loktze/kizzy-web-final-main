@@ -1,6 +1,6 @@
 // src/components/CountdownUnit/CountdownUnit.tsx
-import React from 'react';
-import './CountdownUnit.css';
+import React from "react";
+import "./CountdownUnit.css";
 
 interface CountdownUnitProps {
   value: number;
