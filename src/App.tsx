@@ -11,6 +11,7 @@ import Page2 from "./pages/Page2";
 import Page3 from "./pages/Page3";
 import Page4 from "./pages/Page4";
 import Page5 from "./pages/Page5";
+import CountdownPage from "./pages/CountdownPage"; // Import the CountdownPage
 import PortalPhone from "./components/PortalPhone";
 import useMediaQuery from "./hooks/useMediaQuery";
 import Header from "./components/layout/Header";
@@ -90,6 +91,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* Existing Route for Home Page */}
         <Route
           path="/"
           element={
@@ -116,16 +118,13 @@ function App() {
               <div
                 className={`z-[80] pointer-events-none flex flex-col items-center justify-between overflow-hidden fixed top-0  w-full h-full`}
               >
-
-
-
                 <div
                   className={`w-full px-4 flex flex-col items-center gap-4 z-0  ${currentPage === 1
-                    ? "opacity-100 translate-y-[10px]"
-                    : "opacity-0 translate-y-0"
+                      ? "opacity-100 translate-y-[10px]"
+                      : "opacity-0 translate-y-0"
                     }  transform-gpu transition-all duration-500 ease-in-out pt-24`}
                 >
-                  {currentPage === 1 &&
+                  {currentPage === 1 && (
                     <>
                       <p className={`headline text-3xl text-center font-poppins`}>
                         Betting Like Never Before
@@ -163,7 +162,7 @@ function App() {
                         </div>
                       </div>
                     </>
-                  }
+                  )}
                 </div>
 
                 <PortalPhone currentPage={currentPage} />
@@ -174,6 +173,14 @@ function App() {
             </>
           }
         />
+
+        {/* New Route for CountdownPage */}
+        <Route
+          path="/countdownpage"
+          element={<CountdownPage />}
+        />
+
+
       </Routes>
     </Router>
   );

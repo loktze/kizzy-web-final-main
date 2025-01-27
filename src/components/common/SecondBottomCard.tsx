@@ -60,7 +60,7 @@ const SecondBottomCard: React.FC<SecondBottomCardProps> = ({ className }) => {
             </svg>
           </div>
           <div className="flex bg-black py-2 px-3 rounded-full items-center">
-            <p className="font-lexend text-white text-center">Subscribe</p>
+            <p className="font-lexend text-white text-center">Follow</p>
           </div>
         </div>
       </div>

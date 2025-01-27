@@ -9,7 +9,7 @@ interface Page3Props {
 
 const Page3: React.FC<Page3Props> = ({ currentPage }) => {
   return (
-    <div className="relative h-full bg-[#110c2f] bg-cover bg-center z-40">
+    <div className="relative h-full bg-[#110c2f] bg-cover bg-center z-[9999]">
       <div className="max-w-xxlScreen mx-auto px-4 relative h-full z-40">
         <div className="flex w-full pt-24 lg:pt-24 2xl:pt-28 h-full text-center">
           <div className="relative w-full flex flex-col items-center">

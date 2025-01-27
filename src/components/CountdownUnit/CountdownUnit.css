@@ -1,0 +1,32 @@
+/* src/components/CountdownUnit/CountdownUnit.css */
+
+.countdown-unit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-unit {
+    background-color: rgba(51, 51, 51, 0.8);
+    /* Semi-transparent background */
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    /* Square shape */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Optional: Add hover effects or transitions */
+.countdown-unit:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
