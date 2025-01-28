@@ -115,7 +115,7 @@ function App() {
                 className={`z-[80] pointer-events-none flex flex-col items-center justify-between overflow-hidden fixed top-0 w-full h-full`}
               >
                 <div
-                  className={`w-full px-4 flex flex-col items-center gap-4 z-0  ${currentPage === 1
+                  className={`w-full px-4 flex flex-col items-center gap-4 mb-4 z-0  ${currentPage === 1
                     ? "opacity-100 translate-y-[10px]"
                     : "opacity-0 translate-y-0"
                     }  transform-gpu transition-all duration-500 ease-in-out pt-24`}
@@ -157,8 +157,8 @@ function App() {
                             <div className="download">Testnet Download</div>
 
                           </button>
-                          <div className="absolute z-[1] bg-darkpurple top-8 lg:top-10 left-1/2 transform -translate-x-1/2 rounded-full text-white inline-flex items-center justify-center px-1 py-1">
-                            <p className="text-[10px] font-500 font-poppins">Coming Soon</p>
+                          <div className="absolute z-[1] bg-darkpurple top-8 lg:top-10 left-1/2 transform -translate-x-1/2 rounded-full text-white inline-flex items-center justify-center px-3 py-1">
+                            <p className="text-[10px] font-500 font-poppins whitespace-nowrap">Coming Soon</p>
                           </div>
                         </div>
                       </div>

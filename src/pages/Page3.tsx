@@ -65,8 +65,8 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
                   <div className="download">Testnet Download</div>
 
                 </button>
-                <div className="absolute z-[1] bg-darkpurple top-8 lg:top-10 left-1/2 transform -translate-x-1/2 rounded-full text-white inline-flex items-center justify-center px-1 py-1">
-                  <p className="text-[10px] font-500 font-poppins">Coming Soon</p>
+                <div className="absolute z-[1] bg-darkpurple top-8 lg:top-10 left-1/2 transform -translate-x-1/2 rounded-full text-white inline-flex items-center justify-center px-3 py-1">
+                  <p className="text-[10px] font-500 font-poppins whitespace-nowrap">Coming Soon</p>
                 </div>
               </div>
             </div>
