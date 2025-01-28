@@ -72,7 +72,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
             </div>
 
             <div
-              className={`pt-24 lg:pt-8 2xl:pt-16 ${currentPage === 2 || currentPage === 4
+              className={`pt-20 lg:pt-8 2xl:pt-16 ${currentPage === 2 || currentPage === 4
                 ? "opacity-100 translate-y-[0]"
                 : "opacity-0 -translate-y-[20px]"
                 } transition-all  transform-gpu duration-700 ease-in-out delay-300 relative`}
