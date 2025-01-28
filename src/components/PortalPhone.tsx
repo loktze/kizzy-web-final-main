@@ -25,7 +25,7 @@ const PortalPhone: React.FC<PortalPhoneProps> = ({
   const videoId = "1033441094";
 
   return (
-    <div className={`h-full flex justify-center items-center overflow-visible w-full pointer-events-none`}>
+    <div className={`h-full flex justify-center items-center overflow-visible w-full pointer-events-none touch-action-pan-y user-select-none`}>
 
       <div className={`${currentPage === 1 ? "scale-[1.3] translate-y-[22px]" : "scale-1 -translate-y-[60px]"} duration-500 ease-in-out relative ${phoneClassName} will-change-transform origin-top md:duration-500 transition-all transform-gpu`}>
         {shouldShowPhone && (
