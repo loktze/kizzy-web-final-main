@@ -31,7 +31,7 @@ const PrivacyPolicy: React.FC = () => {
           uses data and your rights as a Kizzy user.
         </p>
       </div>
-      <div className="w-full font-lexend text-[#666] text-[14px] lg:text-[16px] mt-8 px-5 lg:px-64 py-7 overflow-y-auto bg-transparent hide-scrollbar">
+      <div className="w-full font-lexend text-[#666] text-[14px] lg:text-[16px] my-8 px-5 lg:px-64 py-7 overflow-y-auto bg-transparent hide-scrollbar">
         <h1 className="text-[16px] text-[#333333] font-semibold mb-2">Privacy Policy</h1>
         <h1 className="text-[16px] text-[#333333] font-semibold mb-2">Kizzy Labs - Privacy Policy</h1>
         <h1 className="text-[16px] text-[#333333] font-semibold mb-7">Last modified: July 31st, 2024</h1>
