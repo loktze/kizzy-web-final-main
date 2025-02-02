@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
 import wave from "../assets/lotties/wave.json";
 import line from "../assets/lotties/line.json";
@@ -166,7 +167,7 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
           </div>
         </div>
         <footer className="absolute bottom-0 w-full bg-transparent">
-          <div className="flex justify-center lg:hidden">
+          <div className="flex justify-center md:hidden">
             <div className="flex gap-4 pb-8 2xl:gap-6 items-center">
               <p className="p3footer">&copy; Kizzy Labs</p>
               <a
@@ -180,17 +181,19 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
                   className="w-3 h-3 object-contain"
                 />
               </a>
-              <p className="p3footer">Privacy Policy</p>
+              <Link to="/privacypolicy">
+                <p className="p3footer">Privacy Policy</p>
+              </Link>
             </div>
           </div>
-          <div className="hidden lg:flex justify-center">
+          <div className="hidden md:flex justify-center">
             <div className="flex gap-4 pb-8 2xl:pb-6 items-center">
-              <button>
+              <p>
                 <p className="p3footer">&copy; Kizzy Labs</p>
-              </button>
-              <button>
+              </p>
+              <Link to="/privacypolicy">
                 <p className="p3footer">Privacy Policy</p>
-              </button>
+              </Link>
             </div>
           </div>
         </footer>

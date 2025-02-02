@@ -10,10 +10,14 @@ const Header: React.FC<HeaderProps> = ({ currentPage, isMedium }) => {
   const isPage3 = currentPage === 4 && isMedium;
   const isPage3Large = currentPage === 2 && !isMedium;
 
+  const handleRefresh = () => {
+    window.location.href = "/"; // This will force a full page reload
+  };
+
   return (
     <div className="mt-[15px] absolute top-0 w-full bg-transparent p-4 lg:p-6">
       <div className="max-w-[2000px] mx-auto flex justify-between items-center">
-        <div>
+        <div onClick={handleRefresh} className="cursor-pointer">
           <img
             src={
               isPage3 || isPage3Large
@@ -35,9 +39,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, isMedium }) => {
                 ? "/images/kizzy-light-logo.png"
                 : "/images/kizzy-dark-logo.png"
             }
-            alt={
-              isPage3 || isPage3Large ? "Kizzy Light Logo" : "Kizzy Dark Logo"
-            }
+            alt={isPage3 || isPage3Large ? "Kizzy Light Logo" : "Kizzy Dark Logo"}
             width={142}
             height={58}
             className="hidden lg:block"

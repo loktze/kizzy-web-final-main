@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 interface Page1Props {
   currentPage: number;
@@ -49,20 +51,24 @@ const Page1: React.FC<Page1Props> = ({ currentPage }) => {
         </>
       }
 
-      <footer className="absolute bottom-0 w-full bg-transparent">
+      <footer className="absolute bottom-0 w-full bg-transparent z-[1500]">
         <div className="hidden md:flex justify-end p-12">
-          <p className="p1footer">Privacy Policy</p>
+          <Link to="/privacypolicy" className="p1footer ">Privacy Policy</Link>
         </div>
         <div
           className={`${currentPage !== 0 ? "hidden" : "flex"} justify-center md:hidden`}
         >
           <div className="flex gap-4 pb-6">
-            <button>
-              <p className="p1footer">Privacy Policy</p>
-            </button>
-            <button>
-              <p className="p1footer">Careers</p>
-            </button>
+            <Link to="/privacypolicy">
+              <button className="p1footer">Privacy Policy</button>
+            </Link>
+            <a
+              href="https://jobs.polymer.co/kizzy-labs-corp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="p1footer">Careers</button>
+            </a>
           </div>
         </div>
       </footer>

@@ -20,7 +20,7 @@ const PrivacyPolicy: React.FC = () => {
       <div className="fixed top-0 left-0 w-full z-[9999]">
         <Header currentPage={currentPage} isMedium={isMedium} />
       </div>
-      <div className="flex flex-col gap-4 xl:gap-6 justify-center pt-24 xl:pt-32">
+      {/* <div className="flex flex-col gap-4 xl:gap-6 justify-center pt-24 xl:pt-32">
         <p className="headline text-2xl text-center">
           Our commitment to
           <br className="md:hidden" /> protecting your privacy
@@ -30,11 +30,11 @@ const PrivacyPolicy: React.FC = () => {
           <br className="md:hidden" />
           uses data and your rights as a Kizzy user.
         </p>
-      </div>
-      <div className="w-full font-lexend text-[#666] text-[14px] lg:text-[16px] my-8 px-5 lg:px-64 py-7 overflow-y-auto bg-transparent hide-scrollbar">
+      </div> */}
+      <div className="w-full font-lexend text-[#666] text-[14px] lg:text-[16px] mt-32 my-8 px-5 lg:px-64 py-7 overflow-y-auto bg-transparent hide-scrollbar">
         <h1 className="text-[16px] text-[#333333] font-semibold mb-2">Privacy Policy</h1>
         <h1 className="text-[16px] text-[#333333] font-semibold mb-2">Kizzy Labs - Privacy Policy</h1>
-        <h1 className="text-[16px] text-[#333333] font-semibold mb-7">Last modified: July 31st, 2024</h1>
+        <h1 className="text-[16px] text-[#333333] font-semibold mb-7">Last modified: January 31st, 2025</h1>
 
         <h1 className="text-[16px] text-[#333333] font-semibold mb-2">Introduction</h1>
         <p className="mb-4">
@@ -63,7 +63,7 @@ const PrivacyPolicy: React.FC = () => {
         </p>
         <h1 className="text-[16px] text-[#333333] font-semibold mb-2">Children Under the Age of 18:</h1>
         <p className="mb-4">
-          Our Website is not intended for children under 18 years of age. No one under age 18 may provide any information to us, including on the Website. We do not knowingly collect personal information from children under 18. If you are under 18, do not use or provide any information on this Website or through any of its features, or provide any information about yourself to us, including your name, address, telephone number, email address, or any blockchain identity or records related to you. If we learn we have collected or received personal information from a child under 18 without verification of parental consent, we will delete that information. If you believe we might have any information from or about a child under 18, please contact us at [INSERT PRIVACY EMAIL].
+          Our Website is not intended for children under 18 years of age. No one under age 18 may provide any information to us, including on the Website. We do not knowingly collect personal information from children under 18. If you are under 18, do not use or provide any information on this Website or through any of its features, or provide any information about yourself to us, including your name, address, telephone number, email address, or any blockchain identity or records related to you. If we learn we have collected or received personal information from a child under 18 without verification of parental consent, we will delete that information. If you believe we might have any information from or about a child under 18, please contact us at info@kizzy.io.
         </p>
         <h1 className="text-[16px] text-[#333333] font-semibold mb-2"> The Kinds of Personal Information We Collect:</h1>
         <ul className="list-disc pl-6 mb-4">
@@ -93,7 +93,7 @@ const PrivacyPolicy: React.FC = () => {
           <li>Cookies (or browser cookies). A cookie is a small file placed on the hard drive of your computer. Users may refuse to accept browser cookies by activating the appropriate setting on your browser. However, if you select this setting, you may be unable to access certain parts of our Website. Unless you have adjusted your browser setting so that it will refuse cookies, our system will issue cookies when you direct your browser to our Website.</li>
           <li>Flash Cookies. Certain features of our Website may use local stored objects (or Flash cookies) to collect and store information about your preferences and navigation to, from, and on our Website. Flash cookies are not managed by the same browser settings as are used for browser cookies. For information about managing your privacy and security settings for Flash cookies, see the section below entitled How We Use Your Information "&amp;" Why We Collect It.</li>
           <li>Web Beacons. Pages of our Website and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of certain website content and verifying system and server integrity).</li>
-          <li>We have pages on social media sites like Medium, X (Twitter), and Discord. When you interact with our social media pages, we may collect Personal Information that you elect to provide to us, such as your contact details. In addition, the companies that host our social media pages may provide us with aggregate information and analytics about our social media activity.</li>
+          <li>We have pages on social media sites like Telegram, X (Twitter), and Discord. When you interact with our social media pages, we may collect Personal Information that you elect to provide to us, such as your contact details. In addition, the companies that host our social media pages may provide us with aggregate information and analytics about our social media activity.</li>
         </ul>
         <h1 className="text-[16px] text-[#333333] font-semibold mb-2">How We Use Your Information "&amp;" Why We Collect It:</h1>
         <p className="mb-4">
@@ -166,7 +166,7 @@ const PrivacyPolicy: React.FC = () => {
           <li>The right to data portability – You have the right to request we transfer the data that we have collected to another organization, or directly to you, under certain conditions.</li>
         </ul>
         <p className="mb-4">
-          If you would like to exercise any of these rights, please contact us at [INSERT CONTACT EMAIL]. If you make a request, we will respond within one month.
+          If you would like to exercise any of these rights, please contact us at info@kizzy.io. If you make a request, we will respond within one month.
         </p>
         <p className="mb-4">
           If you reside within the EEA, the GDPR grants you specific rights concerning your personal data. “Personal Information” within this policy is equivalent to “personal data” as defined by the GDPR.
@@ -182,7 +182,7 @@ const PrivacyPolicy: React.FC = () => {
         </p>
         <h1 className="text-[16px] text-[#333333] font-semibold mb-2">For California Residents:</h1>
         <p className="mb-4">
-          Under the California Civil Code Section § 1798.83, if you reside in California, you have the right to request information regarding the disclosure of your personal information by us to third parties for the third parties’ direct marketing purposes. To inquire about our practices related to the sharing of information with third parties and affiliates for their direct marketing purposes, please contact us at [INSERT CONTACT INFORMATION].
+          Under the California Civil Code Section § 1798.83, if you reside in California, you have the right to request information regarding the disclosure of your personal information by us to third parties for the third parties’ direct marketing purposes. To inquire about our practices related to the sharing of information with third parties and affiliates for their direct marketing purposes, please contact us at info@kizzy.io.
         </p>
         <h1 className="text-[16px] text-[#333333] font-semibold mb-2">Changes to Our Privacy Policy:</h1>
         <p className="mb-4">
@@ -190,7 +190,7 @@ const PrivacyPolicy: React.FC = () => {
         </p>
         <h1 className="text-[16px] text-[#333333] font-semibold mb-2">What if I have questions about this Privacy Policy?</h1>
         <p className="mb-4">
-          If you have any questions about this Privacy Policy, please send us a detailed message to [INSERT PRIVACY EMAIL] and we will try to resolve your concerns and provide further information.
+          If you have any questions about this Privacy Policy, please send us a detailed message to info@kizzy.io and we will try to resolve your concerns and provide further information.
         </p>
       </div>
 
