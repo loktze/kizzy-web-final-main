@@ -188,9 +188,9 @@ const Page3: React.FC<Page3Props> = ({ currentPage }) => {
           </div>
           <div className="hidden md:flex justify-center">
             <div className="flex gap-4 pb-8 2xl:pb-6 items-center">
-              <p>
+              <div className="cursor-default">
                 <p className="p3footer">&copy; Kizzy Labs</p>
-              </p>
+              </div>
               <Link to="/privacypolicy">
                 <p className="p3footer">Privacy Policy</p>
               </Link>
